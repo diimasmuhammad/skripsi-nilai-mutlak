@@ -1,0 +1,115 @@
+{
+  "soal":[
+   
+   {
+      "noSoal":{
+         
+         "butirSoal":"\\text{Definisi dari } |x-9| \\text{ adalah ....}",
+         "opsiA":"\begin{cases}(x-9), \\text{untuk } x \\ge 9 \\ (x+9), \\text{untuk } x < 9 end{cases}",
+         "opsiB":"\begin{cases}(x-9), \\text{untuk } x \\ge 9 \\ (-x+9), \\text{untuk } x < 9 end{cases}",
+         "opsiC":"\begin{cases}(x+9), \\text{untuk } x \\ge 9 \\ (-x-9), \\text{untuk } x < 9 end{cases}",
+         "opsiD":"\begin{cases}(x-9), \\text{untuk } x \\le 9 \\ (-x+9), \\text{untuk } x > 9 end{cases}",
+         "opsiE":"\begin{cases}(x+9), \\text{untuk } x > 9 \\ (-x-9), \\text{untuk } x < 9 end{cases}"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Penyelesaian dari } 16 + 4 - |-6-2| \\text{ adalah ....}",
+        "opsiA":"6",
+        "opsiB":"12",
+        "opsiC":"8",
+        "opsiD":"-12",
+        "opsiE":"21"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Hasil dari } |3- \\sqrt{10}| + |7- \\sqrt{10}| \\text{ adalah ....}",
+        "opsiA":"5",
+        "opsiB":"7",
+        "opsiC":"4",
+        "opsiD":"-10",
+        "opsiE":"12"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Hasil dari } |-2 \\centerdot 2 + 5 - 1| \\text{ adalah ....}",
+        "opsiA":"0",
+        "opsiB":"2",
+        "opsiC":"3",
+        "opsiD":"15",
+        "opsiE":"8"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Hasil dari } |-2| \\centerdot |-7| - |-5| \\text{ adalah ....}",
+        "opsiA":"6",
+        "opsiB":"3",
+        "opsiC":"11",
+        "opsiD":"9",
+        "opsiE":"20"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Hasil dari } |-6|:|3|+|-8| \\text{ adalah ....}",
+        "opsiA":"..",
+        "opsiB":"20",
+        "opsiC":"4",
+        "opsiD":"8",
+        "opsiE":"2"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Grafik fungsi dari nilai mutlak } f(x) = |x-1| \\text{ adalah ....}",
+        "opsiA":"/latihan/no-7-A.png",
+        "opsiB":"/latihan/no-7-B.png",
+        "opsiC":"/latihan/no-7-C.png",
+        "opsiD":"/latihan/no-7-D.png",
+        "opsiE":"/latihan/no-7-E.png"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Grafik fungsi dari nilai mutlak } f(x) = |3x-12| \\text{ adalah ....}",
+        "opsiA":"/latihan/no-8-A.png",
+        "opsiB":"/latihan/no-8-B.png",
+        "opsiC":"/latihan/no-8-C.png",
+        "opsiD":"/latihan/no-8-D.png",
+        "opsiE":"/latihan/no-8-E.png"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Grafik fungsi dari nilai mutlak } f(x) = |4x+12| \\text{ adalah ....}",
+        "opsiA":"/latihan/no-9-A.png",
+        "opsiB":"/latihan/no-9-B.png",
+        "opsiC":"/latihan/no-9-C.png",
+        "opsiD":"/latihan/no-9-D.png",
+        "opsiE":"/latihan/no-9-E.png"
+      }
+     },
+     {
+      "noSoal":{
+        
+        "butirSoal":"\\text{Berapakah titik puncak dari grafik fungsi } f(x) = |18-3x| \\text{ ....}",
+        "opsiA":"(0,5)",
+        "opsiB":"(4,0)",
+        "opsiC":"(6,0)",
+        "opsiD":"(8,0)",
+        "opsiE":"(2,0)"
+      }
+     }
+  ]
+}

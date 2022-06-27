@@ -1,0 +1,40 @@
+{
+  "name": "with-tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@heroicons/react": "^1.0.5",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/material": "^5.0.6",
+    "aos": "^3.0.0-beta.6",
+    "firebase": "^9.5.0",
+    "install": "^0.13.0",
+    "moment": "^2.29.3",
+    "next": "^11.1.4",
+    "npm": "^8.5.5",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-countdown": "^2.3.2",
+    "react-countdown-circle-timer": "^2.5.4",
+    "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.4",
+    "react-geogebra": "^1.2.4",
+    "react-katex": "^2.0.2",
+    "react-timer-hook": "^3.0.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "tailwindcss-text-indent": "^1.0.2"
+  }
+}
