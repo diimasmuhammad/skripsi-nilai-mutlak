@@ -14,6 +14,7 @@ export default function Home() {
               <h1 className="uppercase font-bold text-2xl md:text-3xl lg:text-4xl text-center lg:text-left mb-6">
                 Selamat Datang
               </h1>
+
               <h2 className="font-semibold text-1xl md:text-2xl lg:text-3xl text-center lg:text-left mb-6">
                 di Aplikasi Pembelajaran Persamaan dan Pertidaksamaan Nilai
                 Mutlak Linear Satu Variabel
@@ -49,6 +50,7 @@ export default function Home() {
               Berikut adalah beberapa menu yang tersedia pada aplikasi
             </p>
           </div>
+
           {/* fitur*/}
           <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20">
             {/* fitur 1*/}

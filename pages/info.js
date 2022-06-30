@@ -14,6 +14,7 @@ export default function Info() {
             <TabInfoApp></TabInfoApp>
           </div>
         </div>
+        
       </section>
     </Layout>
   );

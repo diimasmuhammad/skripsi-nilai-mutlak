@@ -14,6 +14,7 @@ import {
 } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import moment from "moment";
+import Link from 'next/link';
 
 export default function DashboardHalamanGuru() {
   const [data, setData] = useState([]);
@@ -166,10 +167,13 @@ export default function DashboardHalamanGuru() {
               className="cursor-pointer duration-500 w-8 "
             ></img>{" "}
           </div>
-          <div className="text-base tracking-wide uppercase">
-            {" "}
+          <Link href="/" className="text-base tracking-wide uppercase">
+            <p>
+
             {process.env.namaAplikasi}{" "}
-          </div>
+            </p>
+          </Link>
+          
           <div> Profil </div>
         </div>
         <div className="bg-white flex justify-center items-center p-7 m-4 border-2  border-trueGray-400 shadow-lg rounded h-konten">
