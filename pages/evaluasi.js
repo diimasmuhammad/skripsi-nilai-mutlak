@@ -71,22 +71,36 @@ export default function evaluasi(props) {
   };
 
   const cekHasil = () => {
-    setHasil(true);
     const soalTerjawab = soal.filter((item) => item.terpilih);
+    let jawabanCek = [];
+
+    soalTerjawab.forEach((item) =>
+      item.opsiJawaban.forEach((data) => {
+        if (data.terpilih) jawabanCek.push(data);
+      })
+    );
     const soalBenar = soalTerjawab.filter((item) =>
       item.opsiJawaban.find(
         (opsi) => opsi.isCorrect && opsi.terpilih === opsi.isCorrect
       )
     );
-    setSkor({
-      benar: soalBenar.length,
-      salah: soal.length - soalBenar.length,
-    });
-    addDoc(koleksiUser, {
-      nama: dataSiswa.namaSiswa,
-      sekolah: dataSiswa.sekolah,
-      skor: soalBenar.length * 10,
-    });
+
+    if (jawabanCek.length < 25) {
+      alert("Kamu Harus Mengisi Semua Jawaban");
+    } else {
+      setHasil(true);
+      setSkor({
+        benar: soalBenar.length,
+        salah: soal.length - soalBenar.length,
+      });
+      addDoc(koleksiUser, {
+        nama: dataSiswa.namaSiswa,
+        sekolah: dataSiswa.sekolah,
+        skor: soalBenar.length * 10,
+        jawaban: jawabanCek,
+        tanggal: serverTimestamp(),
+      });
+    }
   };
 
   return (

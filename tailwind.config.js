@@ -30,6 +30,7 @@ module.exports = {
         latihan: "84vh",
         latihan1: "75vh",
         latihansm: "40vh",
+        kontenguru: "90vh",
         side: "93vh",
       }),
       width: (theme) => ({
