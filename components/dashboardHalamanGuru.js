@@ -97,7 +97,7 @@ export default function DashboardHalamanGuru(props) {
               </svg>
               <span
                 className={
-                  "duration-300 font-bold w-52 origin-left " +
+                  "duration-300 font-bold w-36 origin-left " +
                   (!open && "scale-0 hidden")
                 }
               >
