@@ -137,7 +137,7 @@ export default function jawabanSiswa() {
                         : { backgroundColor: "#ff4d4d" }
                     }
                   >
-                    {item.opsi}
+                    {item.poin}
                   </td>
                 ))}
               </tr>
