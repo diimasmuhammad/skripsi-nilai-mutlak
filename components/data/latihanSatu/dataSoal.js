@@ -127,8 +127,8 @@ export const soal = [
       { poin: "A", opsi: "/latihan/no-9-A.png", isCorrect: false },
       { poin: "B", opsi: "/latihan/no-9-B.png", isCorrect: false },
       { poin: "C", opsi: "/latihan/no-9-C.png", isCorrect: false },
-      { poin: "D", opsi: "/latihan/no-9-D.png", isCorrect: false },
-      { poin: "E", opsi: "/latihan/no-9-E.png", isCorrect: true },
+      { poin: "D", opsi: "/latihan/no-9-D.png", isCorrect: true },
+      { poin: "E", opsi: "/latihan/no-9-E.png", isCorrect: false },
     ],
   },
   {

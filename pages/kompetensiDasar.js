@@ -37,17 +37,23 @@ export default function Kompetensidasar() {
                   <tr>
                     <td className="align-text-top px-4 py-2">3.</td>
                     <td className="py-2">
-                      Mengintepretasi persamaan dan pertidaksamaan nilai mutlak
-                      dari bentuk linear satu variabel dengan persamaan dan
-                      pertidaksamaan linear aljabar lainnya.
+                      Memahami, menerapkan, dan menganalisis pengetahuan
+                      faktual, konseptual, prosedural berdasarkan rasa
+                      ingintahunya tentang ilmu pengetahuan, teknologi, seni,
+                      budaya, dan humaniora dengan wawasan kemanusiaan,
+                      kebangsaan, kenegaraan, dan peradaban terkait penyebab
+                      fenomena dan kejadian, serta menerapkan pengetahuan
+                      prosedural pada bidang kajian yang spesifik sesuai dengan
+                      bakat dan minatnya untuk memecahkan masalah
                     </td>
                   </tr>
                   <tr>
                     <td className="align-text-top px-4 py-2">4.</td>
                     <td className="py-2">
-                      Menyelesaikan masalah yang berkaitan dengan persamaan dan
-                      pertidaksamaan nilai mutlak dari bentuk linear satu
-                      variabel
+                      Mengolah, menalar, dan menyaji dalam ranah konkret dan
+                      ranah abstrak terkait dengan pengembangan dari yang
+                      dipelajarinya di sekolah secara mandiri, dan mampu
+                      menggunakan metoda sesuai kaidah keilmuan
                     </td>
                   </tr>
                 </tbody>

@@ -8,7 +8,7 @@ export default function Footer() {
             <span> | </span>
             <span>Pendidikan Ilmu Komputer</span>
           </li>
-          <li>2021</li>
+          <li>2022</li>
         </ul>
       </div>
     </footer>

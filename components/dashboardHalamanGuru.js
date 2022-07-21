@@ -117,8 +117,8 @@ export default function DashboardHalamanGuru(props) {
                 className="cursor-pointer duration-500 w-8 "
               ></img>{" "}
             </div>
-            <Link href="/" className="text-base tracking-wide uppercase">
-              <a className="text-white">{process.env.namaAplikasi} </a>
+            <Link href="/" className="text-base tracking-wide">
+              <a className="text-white uppercase">Halaman Guru </a>
             </Link>
 
             <div className="text-white"> Profil </div>

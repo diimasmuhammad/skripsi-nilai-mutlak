@@ -84,10 +84,10 @@ const DataDiri = (props) => {
                         <option value={null} selected>
                           Pilih Sekolah
                         </option>
-                        <option value={asalSekolah}>SMA</option>
-                        <option value={asalSekolah}>SMK</option>
+                        {/* <option value={asalSekolah}>SMA</option> */}
+                        {/* <option value={asalSekolah}>SMK</option> */}
                         <option value={asalSekolah}>MA</option>
-                        <option value={asalSekolah}>MAK</option>
+                        {/* <option value={asalSekolah}>MAK</option> */}
                       </select>
                     </div>
                     <div className="relative">

@@ -52,13 +52,33 @@ export default function Home() {
           </div>
 
           {/* fitur*/}
-          <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20">
+          <div className="container grid grid-cols md:grid-cols-1 lg:grid-cols-3 gap-5 mt-20">
+            {/* fitur 4*/}
+            <div className="flex rotate-0 hover:rotate-3 duration-200 bg-gradient-to-tr from-white via-white to-cyan-400 flex-col rounded-md shadow-md lg:mb-16">
+              <div className="p-6 flex flex-col items-center text-center">
+                <Image src="/info.svg" width={64} height={64}></Image>
+                <h3 className="mt-5 mb-2 text-lg uppercase">Info Aplikasi</h3>
+                <p className="mb-2 font-light">
+                  Halaman informasi mengenai aplikasi
+                </p>
+              </div>
+              <div className="flex p-6 mt-12">
+                <Link href="/info">
+                  <button
+                    type="button"
+                    className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
+                  >
+                    Kunjungi
+                  </button>
+                </Link>
+              </div>
+            </div>
             {/* fitur 1*/}
-            <div className="flex rotate-0 hover:rotate-3 duration-200 bg-gradient-to-br from-white via-white to-cyan-400 flex-col rounded-md shadow-md lg:mb-16 ">
+            <div className="flex rotate-0 hover:rotate-3 duration-200 bg-gradient-to-t from-white via-cyan-400 to-white flex-col rounded-md shadow-md lg:my-8">
               <div className="p-6 flex flex-col items-center text-center">
                 <Image src="/education.svg" width={64} height={64}></Image>
                 <h3 className="mt-5 mb-2 text-lg uppercase">
-                  Kompetensi Dasar
+                  Kompetensi Inti Kompetensi Dasar
                 </h3>
                 <p className="mb-2 font-light">
                   Informasi Kompetensi Dasar Persamaan dan Pertidaksamaan Nilai
@@ -69,7 +89,7 @@ export default function Home() {
                 <Link href="/kompetensiDasar">
                   <button
                     type="button"
-                    className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
+                    className="flex-1 bg-cyan-500 text-white font-semibold mb-4 shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
                   >
                     Kunjungi
                   </button>
@@ -77,7 +97,7 @@ export default function Home() {
               </div>
             </div>
             {/* fitur 2*/}
-            <div className="flex rotate-0 hover:rotate-3 duration-200 bg-gradient-to-t from-white via-cyan-400 to-white flex-col rounded-md shadow-md lg:my-8">
+            <div className="flex rotate-0 hover:-rotate-3 duration-200 bg-gradient-to-tl from-white via-white to-cyan-400 flex-col rounded-md shadow-md lg:mb-16">
               <div className="p-6 flex flex-col items-center text-center">
                 <Image src="/buku.svg" width={64} height={64}></Image>
                 <h3 className="mt-5 mb-2 text-lg uppercase">Materi Belajar</h3>
@@ -90,7 +110,7 @@ export default function Home() {
                 <Link href="/materiBabSatu">
                   <button
                     type="button"
-                    className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
+                    className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 mt-12 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
                   >
                     Kunjungi
                   </button>
@@ -98,7 +118,7 @@ export default function Home() {
               </div>
             </div>
             {/* fitur 3*/}
-            <div className="flex rotate-0 hover:-rotate-3 duration-200 bg-gradient-to-t from-white via-cyan-400 to-white flex-col rounded-md shadow-md lg:my-8">
+            {/* <div className="flex rotate-0 hover:-rotate-3 duration-200 bg-gradient-to-br from-white via-white to-cyan-400 flex-col rounded-md shadow-md lg:mb-16 ">
               <div className="p-6 flex flex-col items-center text-center">
                 <Image src="/report.svg" width={64} height={64}></Image>
                 <h3 className="mt-5 mb-2 text-lg uppercase">
@@ -118,27 +138,7 @@ export default function Home() {
                   </button>
                 </Link>
               </div>
-            </div>
-            {/* fitur 4*/}
-            <div className="flex rotate-0 hover:-rotate-3 duration-200 bg-gradient-to-bl from-white via-white to-cyan-400 flex-col rounded-md shadow-md lg:mb-16">
-              <div className="p-6 flex flex-col items-center text-center">
-                <Image src="/info.svg" width={64} height={64}></Image>
-                <h3 className="mt-5 mb-2 text-lg uppercase">Info Aplikasi</h3>
-                <p className="mb-2 font-light">
-                  Halaman informasi mengenai aplikasi
-                </p>
-              </div>
-              <div className="flex p-6 mt-12">
-                <Link href="/info">
-                  <button
-                    type="button"
-                    className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
-                  >
-                    Kunjungi
-                  </button>
-                </Link>
-              </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </Layout>
