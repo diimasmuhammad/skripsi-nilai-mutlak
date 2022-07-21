@@ -7,7 +7,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { db } from "../firebase/initFirebase";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 import DataDiri from "../components/latihan/DataDiri";
 import { useTimer } from "react-timer-hook";
 
@@ -121,9 +126,9 @@ export default function latihanBabTiga(props) {
                 <p className="my-2 font-bold text-lg">{skor.benar * 10}</p>
               </div>
               <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
-                <Link href="/">
+                <Link href="/evaluasi">
                   <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
-                    Materi Selanjutnya
+                    Evaluasi
                   </button>
                 </Link>
               </div>

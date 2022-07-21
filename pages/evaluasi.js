@@ -6,7 +6,12 @@ import { BlockMath, InlineMath } from "react-katex";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { db } from "../firebase/initFirebase";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 import DataDiri from "../components/latihan/DataDiri";
 import { useTimer } from "react-timer-hook";
 

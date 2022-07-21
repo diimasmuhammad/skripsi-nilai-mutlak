@@ -131,6 +131,7 @@ export default function hasilBelajarSiswa() {
                       </th>
                     </tr>
                   </thead>
+
                   <tbody
                     className={
                       selectOpsi === "Latihan Bab Satu" &&

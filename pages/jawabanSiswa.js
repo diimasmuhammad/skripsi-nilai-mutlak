@@ -11,8 +11,9 @@ import HasilJawabanTiga from "../components/guru/hasiljawabansiswa/hasilJawabanT
 import HasilJawabanEvaluasi from "../components/guru/hasiljawabansiswa/hasilJawabanEvaluasi";
 
 export default function jawabanSiswa() {
-  const [selectOpsi, setSelectOpsi] = useState();
-  const [selectSekolah, setSelectSekolah] = useState();
+  const [selectOpsi, setSelectOpsi] = useState("");
+  const [selectSekolah, setSelectSekolah] = useState("");
+
   return (
     <DashboardHalamanGuru>
       <div className="bg-white flex justify-center items-center p-7 m-2 border-2  border-trueGray-400 shadow-lg rounded h-kontenguru">
@@ -21,7 +22,7 @@ export default function jawabanSiswa() {
             <div className=" border-2 border-cyan-500 w-max rounded-md shadow-lg mb-2 text-sm">
               <select
                 className="p-2"
-                value={selectOpsi}
+                value={null}
                 onChange={(e) => setSelectOpsi(e.target.value)}
               >
                 <option value="Pilih Laporan" selected>
@@ -36,7 +37,7 @@ export default function jawabanSiswa() {
             <div className="ml-4 border-2 border-cyan-500 w-max rounded-md shadow-lg mb-2 text-sm">
               <select
                 className="p-2"
-                value={selectSekolah}
+                value={null}
                 onChange={(e) => setSelectSekolah(e.target.value)}
               >
                 <option value="Pilih Sekolah" selected>
@@ -139,6 +140,7 @@ export default function jawabanSiswa() {
                 <KunciJawabanEvaluasi></KunciJawabanEvaluasi>
               </tr>
             </thead>
+
             <tbody
               className={
                 "text-base text-center border border-cyan-400 " +
