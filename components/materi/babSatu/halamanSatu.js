@@ -182,8 +182,8 @@ export default function HalamanSatu() {
                 <Image
                   src="/materi/sketsa-garis-bilangan.png"
                   quality={100}
-                  width={600}
-                  height={250}
+                  width={800}
+                  height={450}
                 ></Image>
               </div>
               <figcaption className=" text-xs font-serif italic pb-2 text-center">
@@ -220,8 +220,9 @@ export default function HalamanSatu() {
                       <Image
                         src="/materi/sketsa-tabel-1.png"
                         className=""
-                        width={390}
-                        height={80}
+                        quality={100}
+                        width={464}
+                        height={160}
                       ></Image>
                     </td>
                   </tr>
@@ -229,12 +230,13 @@ export default function HalamanSatu() {
                     <td className="border border-cyan-400">
                       Ke belakang , 3 langkah{" "}
                     </td>
-                    <td className="border border-cyan-400">
+                    <td className="border border-cyan-400 w-max">
                       <Image
                         src="/materi/sketsa-tabel-2.png"
                         className=""
-                        width={390}
-                        height={80}
+                        quality={100}
+                        width={500}
+                        height={230}
                       ></Image>
                     </td>
                   </tr>
@@ -266,8 +268,9 @@ export default function HalamanSatu() {
                       <Image
                         src="/materi/sketsa-tabel-3.png"
                         className=""
-                        width={390}
-                        height={80}
+                        quality={100}
+                        width={520}
+                        height={280}
                       ></Image>
                     </td>
                   </tr>
@@ -299,8 +302,9 @@ export default function HalamanSatu() {
                       <Image
                         src="/materi/sketsa-tabel-4.png"
                         className=""
-                        width={390}
-                        height={80}
+                        quality={100}
+                        width={520}
+                        height={300}
                       ></Image>
                     </td>
                   </tr>
@@ -332,8 +336,9 @@ export default function HalamanSatu() {
                       <Image
                         src="/materi/sketsa-tabel-5.png"
                         className=""
-                        width={390}
-                        height={80}
+                        quality={100}
+                        width={520}
+                        height={300}
                       ></Image>
                     </td>
                   </tr>

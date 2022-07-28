@@ -5,7 +5,7 @@ export default function TabInfoApp() {
   const [bukaTab, setBukaTab] = useState(2);
   return (
     <>
-      <div className="flex flex-wrap mt-4">
+      <div className="flex flex-wrap mt-4 ">
         <div className="w-full">
           {/* Tab Menu */}
           <div className="flex items-center border-b border-indigo-400 py-5 h-10">
@@ -33,7 +33,7 @@ export default function TabInfoApp() {
           </div>
         </div>
         {/* Konten */}
-        <div className="flex justify-center text-justify p-4 mt-2 border border-indigo-200 rounded-lg shadow-xl overflow-auto h-52 w-screen">
+        <div className="flex justify-center text-justify p-4 mt-2 border border-indigo-200 rounded-lg shadow-xl overflow-auto h-80 w-screen">
           {/* Konten Tab 1 */}
           <div className={"pb-5 " + (bukaTab === 1 ? "block" : "hidden")}>
             <h1 className="font-bold uppercase text-xl text-center">

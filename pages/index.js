@@ -16,7 +16,7 @@ export default function Home() {
               </h1>
 
               <h2 className="font-semibold text-1xl md:text-2xl lg:text-3xl text-center lg:text-left mb-6">
-                di Aplikasi Pembelajaran Persamaan dan Pertidaksamaan Nilai
+                Media Interaktif Pembelajaran Persamaan dan Pertidaksamaan Nilai
                 Mutlak Linear Satu Variabel
               </h2>
               <p className="text-center lg:text-left mb-6">
