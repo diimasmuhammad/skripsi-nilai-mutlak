@@ -13,7 +13,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import DataDiri from "../components/latihan/DataDiri";
+import DataDiriLatihanTiga from "../components/latihan/DataDiriLatihanTiga";
 import { useTimer } from "react-timer-hook";
 
 export default function latihanBabTiga(props) {
@@ -32,7 +32,7 @@ export default function latihanBabTiga(props) {
   const koleksiUser = collection(db, "latihantiga");
 
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 910);
+  time.setSeconds(time.getSeconds() + 1220);
   const { seconds, minutes, hours } = useTimer({
     expiryTimestamp: time,
     onExpire: () => cekHasil(),
@@ -262,7 +262,9 @@ export default function latihanBabTiga(props) {
               <PetunjukLatihan />
             </div>
             <div className="mx-5 sm:mx-10">
-              <DataDiri signin={(dataSiswa) => setDataSiswa(dataSiswa)} />
+              <DataDiriLatihanTiga
+                signin={(dataSiswa) => setDataSiswa(dataSiswa)}
+              />
             </div>
           </div>
         </div>

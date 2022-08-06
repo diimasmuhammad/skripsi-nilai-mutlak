@@ -2,7 +2,7 @@ import { Alert, Stack } from "@mui/material";
 import { useState } from "react";
 import Link from "next/link";
 
-const DataDiri = (props) => {
+const DataDiriLatihanTiga = (props) => {
   const [nama, setNama] = useState("");
   const [asalSekolah, setAsalSekolah] = useState(null);
   const [token, setToken] = useState("");
@@ -12,7 +12,7 @@ const DataDiri = (props) => {
   const loginLatihan = (e) => {
     e.preventDefault();
 
-    const tokenLatihan = "cobadulu";
+    const tokenLatihan = "latihantiga";
 
     if (nama === "") {
       setError("Masukkan Data dengan Benar dan Lengkap !");
@@ -131,4 +131,4 @@ const DataDiri = (props) => {
   );
 };
 
-export default DataDiri;
+export default DataDiriLatihanTiga;

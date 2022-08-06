@@ -12,7 +12,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import DataDiri from "../components/latihan/DataDiri";
+import DataDiriEvaluasi from "../components/latihan/DataDiriEvaluasi";
 import { useTimer } from "react-timer-hook";
 
 export default function evaluasi(props) {
@@ -31,7 +31,7 @@ export default function evaluasi(props) {
   const koleksiUser = collection(db, "evaluasi");
 
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 910);
+  time.setSeconds(time.getSeconds() + 3620);
   const { seconds, minutes, hours } = useTimer({
     expiryTimestamp: time,
     onExpire: () => cekHasil(),
@@ -140,7 +140,8 @@ export default function evaluasi(props) {
                     {/* Timer */}
                     <div className="flex justify-center items-center p-4 border-b border-indigo-500 font-bold">
                       <p>
-                        <span>{minutes}</span>:<span>{seconds}</span>
+                        <span>{hours}</span>:<span>{minutes}</span>:
+                        <span>{seconds}</span>
                       </p>
                     </div>
                     {/* navigasi soal */}
@@ -261,7 +262,9 @@ export default function evaluasi(props) {
               <PetunjukLatihan />
             </div>
             <div className="mx-5 sm:mx-10">
-              <DataDiri signin={(dataSiswa) => setDataSiswa(dataSiswa)} />
+              <DataDiriEvaluasi
+                signin={(dataSiswa) => setDataSiswa(dataSiswa)}
+              />
             </div>
           </div>
         </div>
