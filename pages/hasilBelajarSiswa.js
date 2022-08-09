@@ -5,6 +5,7 @@ import ListLatihanDua from "../components/guru/listsiswa/listLatihanDua";
 import ListLatihanTiga from "../components/guru/listsiswa/listLatihanTiga";
 import Evaluasi from "../components/guru/listsiswa/listEvaluasi";
 import { useState } from "react";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default function hasilBelajarSiswa() {
   const [halaman, setHalaman] = useState(1);
@@ -84,6 +85,14 @@ export default function hasilBelajarSiswa() {
                 <option value="MA">MA</option>
               </select>
             </div>
+            <ReactHTMLTableToExcel
+              id="test-table-xls-button"
+              className="download-table-xls-button"
+              table="print-tabel"
+              filename="tablexls"
+              sheet="tablexls"
+              buttonText="Download as XLS"
+            />
           </div>
 
           {/* <button
@@ -114,7 +123,7 @@ export default function hasilBelajarSiswa() {
           <div className="">
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
               <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                <table className="min-w-full leading-normal">
+                <table className="min-w-full leading-normal" id="print-tabel">
                   <thead>
                     <tr>
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -127,7 +136,10 @@ export default function hasilBelajarSiswa() {
                         Nilai
                       </th>
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
-                        Tanggal
+                        Hari/Tanggal
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Jam
                       </th>
                     </tr>
                   </thead>

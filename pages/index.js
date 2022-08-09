@@ -17,7 +17,7 @@ export default function Home() {
 
               <h2 className="font-semibold text-1xl md:text-2xl lg:text-3xl text-center lg:text-left mb-6">
                 Media Interaktif Pembelajaran Persamaan dan Pertidaksamaan Nilai
-                Mutlak Linear Satu Variabel
+                Mutlak Linear
               </h2>
               <p className="text-center lg:text-left mb-6">
                 Untuk SMA/MA Kelas X Semester Ganjil

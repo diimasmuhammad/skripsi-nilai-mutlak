@@ -27,6 +27,7 @@
     "react-dom": "^17.0.2",
     "react-draggable": "^4.4.4",
     "react-geogebra": "^1.2.4",
+    "react-html-table-to-excel": "^2.0.0",
     "react-katex": "^2.0.2",
     "react-timer-hook": "^3.0.5",
     "uuid": "^8.3.2"

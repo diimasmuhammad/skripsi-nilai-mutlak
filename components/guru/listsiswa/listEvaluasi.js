@@ -64,7 +64,12 @@ export default function Evaluasi() {
           </td>
           <td className="px-5 py-5 border border-cyan-400 bg-white text-sm">
             <p className="text-cyan-600 whitespace-no-wrap text-center">
-              {moment(datas.tanggal).format("dddd, DD-MM-YYYY (h:mm:ss)")}
+              {moment(datas.tanggal).format("dddd, DD-MM-YYYY")}
+            </p>
+          </td>
+          <td className="px-5 py-5 border border-cyan-400 bg-white text-sm">
+            <p className="text-cyan-600 whitespace-no-wrap text-center">
+              {moment(datas.tanggal).format("h:mm:ss a")}
             </p>
           </td>
         </tr>

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { ChevronDoubleRightIcon } from "@heroicons/react/outline";
 
 export default function HalamanDua() {
+  const [petunjuk, setPetunjuk] = useState(false);
+
   const [style1, setStyle1] = useState({});
   const [jawabanSatu, setJawabanSatu] = useState(false);
   const [style2a, setStyle2a] = useState({});
@@ -19,6 +21,10 @@ export default function HalamanDua() {
   const [jawabanEmpatB, setJawabanEmpatB] = useState();
   const [style5, setStyle5] = useState({});
   const [jawabanLima, setJawabanLima] = useState();
+
+  const tooglePetunjuk = () => {
+    setPetunjuk(!petunjuk);
+  };
 
   const cekJawaban1 = (jawaban1) => {
     if (jawaban1.target.value === "3") {
@@ -107,7 +113,7 @@ export default function HalamanDua() {
             height={131}
           ></Image>
         </div>
-        <p className="mb-2 border-b-2 border-trueGray-300">
+        <p className="mb-2 border-b-2 border-trueGray-300 font-bold">
           Sehingga |5| = |-5| = 5.
         </p>
         <a className="mt-2 text-white bg-indigo-300 w-full justify-center h-10 p-2 flex rounded-lg items-center font-bold">
@@ -119,6 +125,48 @@ export default function HalamanDua() {
             kemudian gambarkan grafik pergerakan nilai pada garis bilangan di
             canvas yang sudah disediakan.
           </p>
+          <button
+            onClick={tooglePetunjuk}
+            className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+          >
+            Petunjuk
+          </button>
+          <div
+            className={
+              "bg-cyan-500 w-full p-2 mt-2 text-white " +
+              (petunjuk ? "" : "hidden")
+            }
+          >
+            <ol className="list-decimal pl-3">
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Isi kotak kosong dengan jawaban anda
+                  </span>
+                  <img src="/materi/1.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Jika jawaban salah maka sisi kotak akan berwarna merah
+                  </span>
+                  <img src="/materi/2.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Jika jawaban benar maka sisi kotak akan berwarna hijau
+                  </span>
+                  <img src="/materi/3.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+            </ol>
+          </div>
           <ul className=" list-decimal list-inside pl-2 py-4 sm:pl-7">
             <li>
               <div className="inline-block">
@@ -142,14 +190,14 @@ export default function HalamanDua() {
 
               <iframe
                 className={
-                  "border border-cyan-600 ml-16 " +
+                  "border border-cyan-600 ml-10 " +
                   (jawabanSatu ? "inline-block" : "hidden")
                 }
                 scrolling="no"
-                title="marimencoba1"
-                src="https://www.geogebra.org/material/iframe/id/gk7serkq/width/850/height/300/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/true/sdz/false/ctl/false"
-                width="850px"
-                height="300px"
+                title="marimencoba1baru"
+                src="https://www.geogebra.org/material/iframe/id/ubw9snne/width/900/height/262/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/true/sdz/false/ctl/false"
+                width="900px"
+                height="262px"
               >
                 {" "}
               </iframe>
@@ -193,14 +241,14 @@ export default function HalamanDua() {
 
               <iframe
                 className={
-                  "border border-cyan-600 ml-16 " +
+                  "border border-cyan-600 ml-10 " +
                   (jawabanDuaA && jawabanDuaB ? "inline-block" : "hidden")
                 }
                 scrolling="no"
-                title="marimencoba2"
-                src="https://www.geogebra.org/material/iframe/id/g8k4gjrj/width/850/height/300/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/true/sdz/false/ctl/false"
-                width="850px"
-                height="300px"
+                title="marimencoba2baru"
+                src="https://www.geogebra.org/material/iframe/id/guqmc6xu/width/900/height/250/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/true/sdz/false/ctl/false"
+                width="900px"
+                height="250px"
               >
                 {" "}
               </iframe>
@@ -277,14 +325,14 @@ export default function HalamanDua() {
               </div>
               <iframe
                 className={
-                  "border border-cyan-600 ml-16 " +
+                  "border border-cyan-600 ml-10 " +
                   (jawabanEmpatA && jawabanEmpatB ? "inline-block" : "hidden")
                 }
                 scrolling="no"
-                title="marimencoba4"
-                src="https://www.geogebra.org/material/iframe/id/sqx4ebe8/width/850/height/300/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
-                width="850px"
-                height="300px"
+                title="marimencoba4baru"
+                src="https://www.geogebra.org/material/iframe/id/gsrtmttc/width/900/height/250/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/true/sdz/false/ctl/false"
+                width="900px"
+                height="250px"
               >
                 {" "}
               </iframe>
@@ -310,14 +358,14 @@ export default function HalamanDua() {
               </div>
               <iframe
                 className={
-                  "border border-cyan-600 ml-16 " +
+                  "border border-cyan-600 ml-10 " +
                   (jawabanLima ? "inline-block" : "hidden")
                 }
                 scrolling="no"
-                title="marimencoba5"
-                src="https://www.geogebra.org/material/iframe/id/gk7serkq/width/850/height/300/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/true/sdz/false/ctl/false"
-                width="850px"
-                height="300px"
+                title="marimencoba5baru"
+                src="https://www.geogebra.org/material/iframe/id/vpekewmf/width/900/height/250/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/true/sdz/false/ctl/false"
+                width="900px"
+                height="250px"
               >
                 {" "}
               </iframe>
