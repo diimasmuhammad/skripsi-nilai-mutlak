@@ -144,7 +144,7 @@ export default function HalamanSatu() {
               <InlineMath math="\Leftrightarrow [(t-34)-(0,2)][(t-34)+(0,2)] \le 0" />
             </p>
             <p className="text-justify indent-xl">
-              <InlineMath math="\Leftrightarrow [(t-34,2)]-[(t-33,8)] \le 0" />
+              <InlineMath math="\Leftrightarrow [(t-34,2)][(t-33,8)] \le 0" />
             </p>
             <p className="text-justify">
               Jadi, nilai pembuat nol nya adalah <InlineMath>t=34,2</InlineMath>{" "}

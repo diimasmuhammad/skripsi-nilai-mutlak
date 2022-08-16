@@ -9,24 +9,6 @@ export default function HalamanTiga() {
           Kajian Teori
         </a>
         <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 text-justify ">
-          <p>Dari beberapa ilustrasi sebelumnya dapat disimpulkan bahwa.</p>
-          <ul className=" list-decimal list-inside pl-7 py-4">
-            <li>
-              Garis bilangan digunakan sebagai media untuk menunjukkan nilai
-              mutlak.
-            </li>
-            <li className="pt-3">
-              Tanda panah digunakan untuk menentukan besar nilai mutlak, dimana
-              arah ke kiri menandakan nilai mutlak dari bilangan negatif, dan
-              begitu juga sebaliknya. Arah ke kanan menandakan nilai mutlak dari
-              bilangan positif.
-            </li>
-            <li className="pt-3">
-              Besar nilai mutlak dilihat dari panjang tanda panah dan dihitung
-              dari bilangan nol.
-            </li>
-          </ul>
-
           <p>
             Nilai mutlak selalu bernilai positif atau nol, atau dapat ditulis{" "}
             <InlineMath>|x| ≥ 0</InlineMath> untuk setiap bilangan real{" "}
@@ -54,6 +36,45 @@ export default function HalamanTiga() {
               <li className="pt-5">
                 <InlineMath>|-3|=-(-3)=3</InlineMath> karena{" "}
                 <InlineMath math="-3 \lt 0" /> (-3 adalah bilangan negatif)
+              </li>
+            </ol>
+          </div>
+          <div>
+            <p>
+              Sifat-sifat nilai mutlak dapat diturunkan sebagai berikut. Untuk x
+              dan y bilangan real, maka,
+            </p>
+            <ol className="list-lowerAlpha list-inside pl-7 py-4">
+              <li>
+                <InlineMath>|x|\ge0</InlineMath>
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x|=-x</InlineMath>
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x-y|=|y-x|</InlineMath>
+              </li>
+              <li className="pt-5">
+                <InlineMath math="|x|=\sqrt {x ^ 2}" />
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x|^2=x^2</InlineMath>
+              </li>
+              <li className="pt-5">
+                Jika <InlineMath>|x|\lt|y|</InlineMath>, maka{" "}
+                <InlineMath math="|x|^2 \lt |y|^2" />
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x.y|=|x|.|y|</InlineMath>
+              </li>
+              <li className="pt-5">
+                <InlineMath math="\bigg| \dfrac x y \bigg| = \dfrac {|x|}{|y|}, y \neq 0" />
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x-y|\ge|x|-|y|</InlineMath>
+              </li>
+              <li className="pt-5">
+                <InlineMath>|x+y|\le|x|+|y|</InlineMath>
               </li>
             </ol>
           </div>

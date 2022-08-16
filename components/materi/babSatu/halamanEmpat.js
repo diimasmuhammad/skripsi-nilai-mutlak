@@ -3,6 +3,8 @@ import "katex/dist/katex.min.css";
 import { BlockMath, InlineMath } from "react-katex";
 
 export default function HalamanEmpat() {
+  const [petunjuk, setPetunjuk] = useState(false);
+
   // Save State soal 1.a
   const [style1A, setStyle1A] = useState({});
   const [style1B, setStyle1B] = useState({});
@@ -43,6 +45,10 @@ export default function HalamanEmpat() {
   const [style5B2, setStyle5B2] = useState({});
   const [style5C1, setStyle5C1] = useState({});
   const [style5C2, setStyle5C2] = useState({});
+
+  const tooglePetunjuk = () => {
+    setPetunjuk(!petunjuk);
+  };
 
   // Function cek jawaban soal 1.a
   const cekJawaban1A = (jawaban1A) => {
@@ -227,7 +233,10 @@ export default function HalamanEmpat() {
     if (
       jawaban4A.target.value === "|2|*|(-3)|" ||
       jawaban4A.target.value === "|2|.|(-3)|" ||
-      jawaban4A.target.value === "|2|x|(-3)|"
+      jawaban4A.target.value === "|2|x|(-3)|" ||
+      jawaban4A.target.value === "|2|*|-3|" ||
+      jawaban4A.target.value === "|2|.|-3|" ||
+      jawaban4A.target.value === "|2|x|-3|"
     ) {
       setStyle4A({ border: "2px solid green" });
     } else {
@@ -309,6 +318,7 @@ export default function HalamanEmpat() {
       // setJawabanEmpatB(false);
     }
   };
+
   return (
     <>
       <div className="text-base text-justify relative">
@@ -445,7 +455,51 @@ export default function HalamanEmpat() {
             Setelah memahami kajian teori dan contoh soal dari konsep nilai
             mutlak diatas, mari kerjakan beberapa soal berikut.
           </p>
-          <ol className="list-decimal list-inside">
+          <div>
+            <button
+              onClick={tooglePetunjuk}
+              className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+            >
+              Petunjuk
+            </button>
+          </div>
+          <div
+            className={
+              "bg-cyan-500 w-full p-2 mt-2 text-white " +
+              (petunjuk ? "" : "hidden")
+            }
+          >
+            <ol className="list-decimal pl-3">
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Isi kotak kosong dengan jawaban anda
+                  </span>
+                  <img src="/materi/1.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Jika jawaban salah maka sisi kotak akan berwarna merah
+                  </span>
+                  <img src="/materi/2.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+              <li>
+                <div className="flex  items-center">
+                  {" "}
+                  <span className="mr-4">
+                    Jika jawaban benar maka sisi kotak akan berwarna hijau
+                  </span>
+                  <img src="/materi/3.png" className="rounded-full w-20 h-14" />
+                </div>
+              </li>
+            </ol>
+          </div>
+          <ol className="list-decimal list-inside mt-1">
             <li>
               Tentukan definisi dari.
               <ol className=" list-lowerAlpha list-inside pl-4">
@@ -766,7 +820,7 @@ export default function HalamanEmpat() {
                 </li>
                 {/* Soal 2.b */}
                 <li>
-                  <InlineMath>|2 * (-3)|</InlineMath>
+                  <InlineMath>|2 . (-3)|</InlineMath>
                   <ul className="pl-4 ">
                     <li>
                       <a className="font-bold"> Penyelesaian: </a>
@@ -777,7 +831,7 @@ export default function HalamanEmpat() {
                         <li>
                           <div className="inline-block">
                             <div className="flex flex-row items-center">
-                              <InlineMath math="|2 * (-3)| = " />
+                              <InlineMath math="|2 . (-3)| = " />
                               <span className="inline-block">
                                 <div className="flex flex-col">
                                   <div>

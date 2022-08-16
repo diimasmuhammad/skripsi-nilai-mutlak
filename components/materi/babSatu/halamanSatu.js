@@ -3,6 +3,8 @@ import { useState } from "react";
 import { InlineMath } from "react-katex";
 
 export default function HalamanSatu() {
+  const [petunjuk, setPetunjuk] = useState(false);
+
   // Save state box tabel
   const [boxTabel1A, setBoxTabel1A] = useState({});
   const [boxTabel1B, setBoxTabel1B] = useState({});
@@ -82,6 +84,9 @@ export default function HalamanSatu() {
       setBoxTabel1F({ border: "2px solid red" });
       setCekJawabanTabel1F(false);
     }
+  };
+  const tooglePetunjuk = () => {
+    setPetunjuk(!petunjuk);
   };
   return (
     <>
@@ -163,10 +168,10 @@ export default function HalamanSatu() {
           </a>
           <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 ">
             <p className="text-justify indent-sm">
-              Seorang anak bermain lompat-lompatan di lapangan. Dari posisi
-              diam, si anak melompat ke depan 2 langkah, kemudian 3 langkah ke
-              belakang, dilanjutkan 2 langkah ke depan, kemudian 1 langkah ke
-              belakang, dan akhirnya 1 langkah lagi ke belakang.
+              Rudi bermain lompat-lompatan di lapangan. Dari posisi diam, rudi
+              melompat ke depan 2 langkah, kemudian 3 langkah ke belakang,
+              dilanjutkan 2 langkah ke depan, kemudian 1 langkah ke belakang,
+              dan akhirnya 1 langkah lagi ke belakang.
             </p>
 
             <p className="text-justify indent-sm py-2">
@@ -192,12 +197,64 @@ export default function HalamanSatu() {
             </figure>
 
             <p className="text-justify indent-sm">
-              Dari sketsa garis bilangan diatas didapatkan tabel sebagai
+              Dari sketsa garis bilangan di atas didapatkan tabel sebagai
               berikut, kemudian{" "}
               <a className="font-bold">
                 lengkapi keterangan tabel yang kosong!
               </a>
             </p>
+            <div className="ml-8">
+              <button
+                onClick={tooglePetunjuk}
+                className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+              >
+                Petunjuk
+              </button>
+            </div>
+            <div
+              className={
+                "bg-cyan-500 p-2 mt-2 text-white " + (petunjuk ? "" : "hidden")
+              }
+            >
+              <ol className="list-decimal pl-3">
+                <li>
+                  <div className="flex  items-center">
+                    {" "}
+                    <span className="mr-4">
+                      Isi kotak kosong dengan jawaban anda
+                    </span>
+                    <img
+                      src="/materi/1.png"
+                      className="rounded-full w-20 h-14"
+                    />
+                  </div>
+                </li>
+                <li>
+                  <div className="flex  items-center">
+                    {" "}
+                    <span className="mr-4">
+                      Jika jawaban salah maka sisi kotak akan berwarna merah
+                    </span>
+                    <img
+                      src="/materi/2.png"
+                      className="rounded-full w-20 h-14"
+                    />
+                  </div>
+                </li>
+                <li>
+                  <div className="flex  items-center">
+                    {" "}
+                    <span className="mr-4">
+                      Jika jawaban benar maka sisi kotak akan berwarna hijau
+                    </span>
+                    <img
+                      src="/materi/3.png"
+                      className="rounded-full w-20 h-14"
+                    />
+                  </div>
+                </li>
+              </ol>
+            </div>
             <div className="flex justify-center items-center text-center pt-4">
               <table className="table-auto border-collapse border border-cyan-600 ...">
                 <thead className="h-10 bg-cyan-500 text-white">
@@ -346,26 +403,26 @@ export default function HalamanSatu() {
               </table>
             </div>
             <p className="text-justify indent-sm py-2">
-              Dari tabel diatas dapat kita misalkan bahwa{" "}
-              <InlineMath math="2x-8" /> adalah posisi diam si anak. Kemudian
-              anak panah pertama menunjukkan pergerakan pertama si anak dari
-              posisi diam yaitu 2 langkah ke depan (mengarah ke sumbu{" "}
+              Dari tabel di atas dapat kita misalkan bahwa{" "}
+              <InlineMath math="2x-8" /> adalah posisi diam rudi. Kemudian anak
+              panah pertama menunjukkan pergerakan pertama rudi dari posisi diam
+              yaitu 2 langkah ke depan (mengarah ke sumbu{" "}
               <InlineMath math="x" /> positif atau <InlineMath math="+2" />
-              ). Kemudian anak panah kedua menunjukkan pergerakkan kedua si anak
+              ). Kemudian anak panah kedua menunjukkan pergerakan kedua rudi
               yaitu 3 langkah ke belakang (mengarah ke sumbu{" "}
               <InlineMath math="x" /> negatif atau <InlineMath math="-3" />
-              ). Demikian seterusnya hingga si anak berhenti pada pergerakan
+              ). Demikian seterusnya hingga rudi berhenti pada pergerakan
               kelima.
             </p>
             <p className="text-justify indent-sm">
-              Jadi, kita dapat melihat pergerakan akhir si anak dari posisi awal
+              Jadi, kita dapat melihat pergerakan akhir rudi dari posisi awal
               adalah 1 langkah saja ke belakang{" "}
               <InlineMath
                 math="(x = -1 \text{ atau } x = (+2) +
                 (-3) + (+2) + (-1) + (-1) = -1)"
               />
               , tetapi konsep nilai mutlak disini adalah berapa banyak langkah
-              yang diambil si anak. Kita hanya menghitung banyak langkah, bukan
+              yang diambil rudi. Kita hanya menghitung banyak langkah, bukan
               arahnya, sehingga banyak langkahnya adalah{" "}
               <InlineMath
                 math="|2| + |-3| +

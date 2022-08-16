@@ -85,14 +85,14 @@ export default function hasilBelajarSiswa() {
                 <option value="MA">MA</option>
               </select>
             </div>
-            <ReactHTMLTableToExcel
+            {/* <ReactHTMLTableToExcel
               id="test-table-xls-button"
               className="download-table-xls-button"
               table="print-tabel"
               filename="tablexls"
               sheet="tablexls"
               buttonText="Download as XLS"
-            />
+            /> */}
           </div>
 
           {/* <button

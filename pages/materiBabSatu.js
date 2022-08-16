@@ -12,15 +12,15 @@ import HalamanEnam from "../components/materi/babSatu/halamanEnam";
 export default function materiBabDua() {
   const [bukaHalamanBabSatu, setHalamanBabSatu] = useState(1);
 
-  // useEffect(() => {
-  //   setHalamanBabSatu(
-  //     JSON.parse(window.localStorage.getItem("bukaHalamanBabSatu"))
-  //   );
-  // }, []);
+  useEffect(() => {
+    setHalamanBabSatu(
+      JSON.parse(window.localStorage.getItem("bukaHalamanBabSatu"))
+    );
+  }, []);
 
-  // useEffect(() => {
-  //   window.localStorage.setItem("bukaHalamanBabSatu", bukaHalamanBabSatu);
-  // }, [bukaHalamanBabSatu]);
+  useEffect(() => {
+    window.localStorage.setItem("bukaHalamanBabSatu", bukaHalamanBabSatu);
+  }, [bukaHalamanBabSatu]);
 
   return (
     <DashboardMateri>
@@ -67,19 +67,16 @@ export default function materiBabDua() {
           >
             <HalamanEnam />
           </div>
-          {/* <div
-            className={bukaHalamanBabSatu === 7 ? "block" : "hidden"}
-            id="halamanTes"
-          >
-            <Tes />
-          </div> */}
         </div>
         <div className="">
           <div className="flex text-base">
             <div className="absolute bottom-0 mb-2 -ml-2">
               {bukaHalamanBabSatu <= 1 ? (
                 <Link href="/">
-                  <button className="  bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
+                  <button
+                    hidden
+                    className="  bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"
+                  >
                     Materi Sebelumnya
                   </button>
                 </Link>

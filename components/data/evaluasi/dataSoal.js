@@ -26,7 +26,7 @@ export const soal = [
   {
     idSoal: 3,
     butirSoal:
-      "\\scriptsize \\text{Hasil dari } |-2|*|7|-|-5+3| \\text{ adalah ....}",
+      "\\scriptsize \\text{Hasil dari } |-2|.|7|-|-5+3| \\text{ adalah ....}",
     opsiJawaban: [
       { poin: "A", opsi: "23", isCorrect: false },
       { poin: "B", opsi: "18", isCorrect: false },

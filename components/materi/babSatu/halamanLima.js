@@ -57,7 +57,7 @@ export default function HalamanLima() {
                     </li>
                     <li className="pt-2">
                       Jadi,{" "}
-                      <InlineMath math="\ |x| = \begin{cases}(x), \text{    } x \ge 0 \\ -(x), -x, \text{    } x < 0 \end{cases}" />
+                      <InlineMath math="\ |x| = \begin{cases}(x), \text{    } x \ge 0 \\ -(x), \text{    } x < 0 \end{cases}" />
                     </li>
                     <li className="pt-2">
                       Maka didapatkan <InlineMath>x \ge 0</InlineMath> dan{" "}
@@ -283,7 +283,7 @@ export default function HalamanLima() {
                     </li>
                     <li className="pt-2">
                       Jadi,{" "}
-                      <InlineMath math="\ |x-2| = \begin{cases}x-2, \hspace{0.85cm} x-2 \ge 0 \\ \hspace{2.4cm} x \ge 2 \\ -(x-2), -x+2 \lt 0 \\ \hspace{1.95cm} -x \lt -2 \\ \hspace{2.4cm} x \lt 2 \end{cases}" />
+                      <InlineMath math="\ |x-2| = \begin{cases}x-2, \hspace{0.55cm} untuk \hspace{0.1cm} x \ge 2 \\ -(x-2)=-x+2, \hspace{0.55cm} untuk \hspace{0.1cm} x \lt 2  \\  \end{cases}" />
                     </li>
                     <li className="pt-2">
                       Maka didapatkan <InlineMath>x \ge 2</InlineMath> dan{" "}

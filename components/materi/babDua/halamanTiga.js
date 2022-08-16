@@ -2492,7 +2492,7 @@ export default function HalamanTiga() {
                     </p>
                     <p className="indent-xs py-1">
                       {" "}
-                      <InlineMath math="(\sqrt{(x+5)^2}=3)^2" />{" "}
+                      <InlineMath math="(\sqrt{(x+5)^2})^2=(3)^2" />{" "}
                       <span>
                         <svg
                           width="20"
@@ -2500,7 +2500,7 @@ export default function HalamanTiga() {
                           viewBox="0 0 30 30"
                           fill="black"
                           stroke="currentColor"
-                          className="inline-block relative ml-20"
+                          className="inline-block relative ml-16"
                         >
                           <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path>
                         </svg>
@@ -2527,7 +2527,7 @@ export default function HalamanTiga() {
                         </svg>
                       </span>
                       <span className="font-bold">
-                        Pindah Ruas <InlineMath>3^2</InlineMath>
+                        <InlineMath>3^2</InlineMath> pindah ruas ke kiri
                       </span>
                     </p>
                     <p className="indent-xs py-1">
@@ -2556,7 +2556,7 @@ export default function HalamanTiga() {
                     </p>
                     <p className="indent-xs py-1">
                       {" "}
-                      <InlineMath>(x+8)</InlineMath> dan{" "}
+                      <InlineMath>(x+8)</InlineMath> atau{" "}
                       <InlineMath>(x+2)</InlineMath>{" "}
                     </p>
                     <p className="indent-xs py-1 font-bold">
@@ -2568,7 +2568,7 @@ export default function HalamanTiga() {
                     <p className="indent-xs py-1">
                       <InlineMath>x=-8 </InlineMath>
                     </p>
-                    <p className="indent-xs py-1">Dan</p>
+                    <p className="indent-xs py-1">atau</p>
                     <p className="indent-xs py-1">
                       <InlineMath>x+2=0</InlineMath>
                     </p>
@@ -2576,8 +2576,8 @@ export default function HalamanTiga() {
                       <InlineMath>x=-2</InlineMath>
                     </p>
                     <p className="indent-xs py-1">
-                      Jadi, nilai x yang memenuhi persamaan{" "}
-                      <InlineMath>x=-8</InlineMath> adalah dan{" "}
+                      Jadi, nilai x yang memenuhi persamaan adalah{" "}
+                      <InlineMath>x=-8</InlineMath>atau{" "}
                       <InlineMath>x=-2</InlineMath>
                     </p>
                   </li>
@@ -2661,11 +2661,11 @@ export default function HalamanTiga() {
                                 placeholder=". . . . . "
                                 autoComplete="off"
                               />
-                              <InlineMath math="\hspace{0cm} )^2" />
+                              <InlineMath math="\hspace{0cm} )^2)^2" />
                             </div>
                             <div className="font-bold ml-4">=</div>
                             <div>
-                              <InlineMath math="\hspace{0.01cm} \sqrt{} (" />
+                              <InlineMath math="\hspace{0.01cm} (\sqrt{} (" />
                               <input
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded-lg w-12 p-1 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                 id="jawaban-2b(4)"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function TabInfoApp() {
   const [bukaTab, setBukaTab] = useState(2);
@@ -116,11 +117,247 @@ export default function TabInfoApp() {
             </table>
           </div>
           {/* Konten Tab 3 */}
-          <div className={"pb-5 " + (bukaTab === 3 ? "block" : "hidden")}>
+          <div
+            className={
+              "pb-5 bg-cyan-500 text-white " +
+              (bukaTab === 3 ? "block" : "hidden")
+            }
+          >
             <h1 className="font-bold uppercase text-xl text-center">
               Petunjuk Penggunaan Aplikasi
             </h1>
-            <p></p>
+            <Image
+              src="/ss1.png"
+              quality={100}
+              width={1898}
+              height={892}
+            ></Image>
+
+            <p className="mb-4">
+              <ol className="list-decimal p-4 bg-cyan-500">
+                <li className="ml-2">Mulai</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-20 h-12"
+                      src="/mulai.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke menu aplikasi
+                  </p>
+                </div>
+              </ol>
+            </p>
+            <Image
+              src="/ss2.png"
+              quality={100}
+              width={1898}
+              height={892}
+            ></Image>
+
+            <p className="mb-4">
+              <ol className="list-decimal p-4 bg-cyan-500">
+                <li className="ml-2">Info Aplikasi</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-64 h-12"
+                      src="/kunjungi.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke menu Info Aplikasi
+                  </p>
+                </div>
+                <li className="ml-2">Kompetensi Inti Kompetensi Dasar</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-64 h-12"
+                      src="/kunjungi.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke menu Kompetensi Inti
+                    Kompetensi dasar
+                  </p>
+                </div>
+                <li className="ml-2">Materi Belajar</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-64 h-12"
+                      src="/kunjungi.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke menu Materi Belajar
+                  </p>
+                </div>
+              </ol>
+            </p>
+            <Image
+              src="/ss3.png"
+              quality={100}
+              width={1898}
+              height={892}
+            ></Image>
+
+            <p className="mb-4">
+              <ol className="list-decimal p-4 bg-cyan-500">
+                <li className="ml-2">Daftar Pustaka</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-32 h-10"
+                      src="/dapus.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke tab Daftar Pustaka
+                  </p>
+                </div>
+                <li className="ml-2">Informasi</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-32 h-10"
+                      src="/perihal.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke tab Informasi Aplikasi
+                  </p>
+                </div>
+                <li className="ml-2">Petunjuk</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-32 h-10"
+                      src="/petunjuk.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke tab Petunjuk
+                  </p>
+                </div>
+                <li className="ml-2">Kolom Konten</li>
+                <div className="ml-2">
+                  <p>Akan menampilkan konten pada setiap tab </p>
+                </div>
+                <li className="ml-2">Beranda</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-28 h-10"
+                      src="/beranda.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke Halaman Awal
+                  </p>
+                </div>
+              </ol>
+            </p>
+            <Image
+              src="/ss4.png"
+              quality={100}
+              width={1898}
+              height={892}
+            ></Image>
+            <p className="mb-4">
+              <ol className="list-decimal p-4 bg-cyan-500">
+                <li className="ml-2">Kompetensi Inti</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-32 h-10"
+                      src="/ki.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke tab Kompetensi Inti
+                  </p>
+                </div>
+                <li className="ml-2">Kompetensi Dasar</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-32 h-10"
+                      src="/kd.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke tab Kompetensi Dasar
+                  </p>
+                </div>
+                <li className="ml-2">Kolom Konten</li>
+                <div className="ml-2">
+                  <p>Akan menampilkan konten pada setiap tab </p>
+                </div>
+
+                <li className="ml-2">Beranda</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-28 h-10"
+                      src="/beranda.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke Halaman Awal
+                  </p>
+                </div>
+              </ol>
+            </p>
+
+            <Image
+              src="/ssmateri.png"
+              quality={100}
+              width={1898}
+              height={892}
+            ></Image>
+            <p>
+              <ol className="list-decimal p-4 bg-cyan-500">
+                <li className="ml-2">Beranda</li>
+                <div className="ml-2">
+                  <p>
+                    Jika{" "}
+                    <img
+                      className="inline-block w-10 h-6"
+                      src="/beranda1.png"
+                      alt=""
+                    />{" "}
+                    ditekan maka akan mengarahkan ke Halaman Utama
+                  </p>
+                </div>
+                <li className="ml-2">Navigasi Daftar Isi</li>
+                <div className="ml-2">
+                  <p>
+                    Navigasi ini terletak di bagian kiri yang berisi judul tiap
+                    subbab pada bab Persamaan dan Pertidaksamaan Nilai Mutlak
+                    Linear. Pengguna dapat pergi ke halaman awal subbab yang
+                    diinginkan dengan menekan salah satunya.
+                  </p>
+                </div>
+                <li className="ml-2">Kolom Materi</li>
+                <div className="ml-2">
+                  <p>
+                    Akan menyajikan materi, contoh beserta latihan interaktif
+                    pada setiap sub bab nya
+                  </p>
+                </div>
+                <li className="ml-2">Navigasi Halaman</li>
+                <div className="ml-2">
+                  <p>
+                    Navigasi ini terletak di bagian bawah kolom materi. Navigasi
+                    ini bersifat linear, yang mana pengguna dapat berpindah ke
+                    halaman selanjutnya atau ke halaman sebelumnya.
+                  </p>
+                </div>
+              </ol>
+            </p>
           </div>
         </div>
         {/* Footer */}

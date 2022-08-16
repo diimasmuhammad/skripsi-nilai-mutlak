@@ -4,6 +4,12 @@ import { useState } from "react";
 import { BlockMath, InlineMath } from "react-katex";
 
 export default function HalamanEnam() {
+  const [petunjuk, setPetunjuk] = useState(false);
+
+  const tooglePetunjuk = () => {
+    setPetunjuk(!petunjuk);
+  };
+
   // Save State soal 1.a
   const [style1A, setStyle1A] = useState({});
   const [style1B, setStyle1B] = useState({});
@@ -12,11 +18,6 @@ export default function HalamanEnam() {
   const [style1E, setStyle1E] = useState({});
   const [style1F, setStyle1F] = useState({});
   const [style1G, setStyle1G] = useState({});
-  const [style1H, setStyle1H] = useState({});
-  const [style1I, setStyle1I] = useState({});
-  const [style1J, setStyle1J] = useState({});
-  const [style1K, setStyle1K] = useState({});
-  const [style1L, setStyle1L] = useState({});
 
   // Save State soal 1.b
   const [style2A, setStyle2A] = useState({});
@@ -26,11 +27,6 @@ export default function HalamanEnam() {
   const [style2E, setStyle2E] = useState({});
   const [style2F, setStyle2F] = useState({});
   const [style2G, setStyle2G] = useState({});
-  const [style2H, setStyle2H] = useState({});
-  const [style2I, setStyle2I] = useState({});
-  const [style2J, setStyle2J] = useState({});
-  const [style2K, setStyle2K] = useState({});
-  const [style2L, setStyle2L] = useState({});
 
   // Save State soal 1.c
   const [style3A, setStyle3A] = useState({});
@@ -40,13 +36,6 @@ export default function HalamanEnam() {
   const [style3E, setStyle3E] = useState({});
   const [style3F, setStyle3F] = useState({});
   const [style3G, setStyle3G] = useState({});
-  const [style3H, setStyle3H] = useState({});
-  const [style3I, setStyle3I] = useState({});
-  const [style3J, setStyle3J] = useState({});
-  const [style3K, setStyle3K] = useState({});
-  const [style3L, setStyle3L] = useState({});
-  const [style3M, setStyle3M] = useState({});
-  const [style3N, setStyle3N] = useState({});
 
   // Save state tabel soal 1.a
   const [styleTable1A, setStyleTable1A] = useState({});
@@ -128,11 +117,6 @@ export default function HalamanEnam() {
   const [jawabanSatuE, setJawabanSatuE] = useState(false);
   const [jawabanSatuF, setJawabanSatuF] = useState(false);
   const [jawabanSatuG, setJawabanSatuG] = useState(false);
-  const [jawabanSatuH, setJawabanSatuH] = useState(false);
-  const [jawabanSatuI, setJawabanSatuI] = useState(false);
-  const [jawabanSatuJ, setJawabanSatuJ] = useState(false);
-  const [jawabanSatuK, setJawabanSatuK] = useState(false);
-  const [jawabanSatuL, setJawabanSatuL] = useState(false);
 
   // Save state kondisi soal 1.b
   const [jawabanDuaA, setJawabanDuaA] = useState(false);
@@ -142,11 +126,6 @@ export default function HalamanEnam() {
   const [jawabanDuaE, setJawabanDuaE] = useState(false);
   const [jawabanDuaF, setJawabanDuaF] = useState(false);
   const [jawabanDuaG, setJawabanDuaG] = useState(false);
-  const [jawabanDuaH, setJawabanDuaH] = useState(false);
-  const [jawabanDuaI, setJawabanDuaI] = useState(false);
-  const [jawabanDuaJ, setJawabanDuaJ] = useState(false);
-  const [jawabanDuaK, setJawabanDuaK] = useState(false);
-  const [jawabanDuaL, setJawabanDuaL] = useState(false);
 
   // Save state kondisi soal 1.c
   const [jawabanTigaA, setJawabanTigaA] = useState(false);
@@ -156,13 +135,6 @@ export default function HalamanEnam() {
   const [jawabanTigaE, setJawabanTigaE] = useState(false);
   const [jawabanTigaF, setJawabanTigaF] = useState(false);
   const [jawabanTigaG, setJawabanTigaG] = useState(false);
-  const [jawabanTigaH, setJawabanTigaH] = useState(false);
-  const [jawabanTigaI, setJawabanTigaI] = useState(false);
-  const [jawabanTigaJ, setJawabanTigaJ] = useState(false);
-  const [jawabanTigaK, setJawabanTigaK] = useState(false);
-  const [jawabanTigaL, setJawabanTigaL] = useState(false);
-  const [jawabanTigaM, setJawabanTigaM] = useState(false);
-  const [jawabanTigaN, setJawabanTigaN] = useState(false);
 
   // Save state kondisi tabel soal 1.a
   const [jawabanTabelSatuA, setJawabanTabelSatuA] = useState(false);
@@ -247,7 +219,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1B = (jawaban1B) => {
-    if (jawaban1B.target.value === "x-1") {
+    if (jawaban1B.target.value === "x") {
       setStyle1B({ border: "2px solid green" });
       setJawabanSatuB(true);
     } else {
@@ -256,7 +228,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1C = (jawaban1C) => {
-    if (jawaban1C.target.value === "0") {
+    if (jawaban1C.target.value === "1") {
       setStyle1C({ border: "2px solid green" });
       setJawabanSatuC(true);
     } else {
@@ -265,7 +237,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1D = (jawaban1D) => {
-    if (jawaban1D.target.value === "x") {
+    if (jawaban1D.target.value === "-(x-1)") {
       setStyle1D({ border: "2px solid green" });
       setJawabanSatuD(true);
     } else {
@@ -274,7 +246,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1E = (jawaban1E) => {
-    if (jawaban1E.target.value === "1") {
+    if (jawaban1E.target.value === "-x+1") {
       setStyle1E({ border: "2px solid green" });
       setJawabanSatuE(true);
     } else {
@@ -283,7 +255,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1F = (jawaban1F) => {
-    if (jawaban1F.target.value === "-(x-1)") {
+    if (jawaban1F.target.value === "x") {
       setStyle1F({ border: "2px solid green" });
       setJawabanSatuF(true);
     } else {
@@ -292,57 +264,12 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban1G = (jawaban1G) => {
-    if (jawaban1G.target.value === "-x+1") {
+    if (jawaban1G.target.value === "1") {
       setStyle1G({ border: "2px solid green" });
       setJawabanSatuG(true);
     } else {
       setStyle1G({ border: "2px solid red" });
       setJawabanSatuG(false);
-    }
-  };
-  const cekJawaban1H = (jawaban1H) => {
-    if (jawaban1H.target.value === "0") {
-      setStyle1H({ border: "2px solid green" });
-      setJawabanSatuH(true);
-    } else {
-      setStyle1H({ border: "2px solid red" });
-      setJawabanSatuH(false);
-    }
-  };
-  const cekJawaban1I = (jawaban1I) => {
-    if (jawaban1I.target.value === "-x") {
-      setStyle1I({ border: "2px solid green" });
-      setJawabanSatuI(true);
-    } else {
-      setStyle1I({ border: "2px solid red" });
-      setJawabanSatuI(false);
-    }
-  };
-  const cekJawaban1J = (jawaban1J) => {
-    if (jawaban1J.target.value === "-1") {
-      setStyle1J({ border: "2px solid green" });
-      setJawabanSatuJ(true);
-    } else {
-      setStyle1J({ border: "2px solid red" });
-      setJawabanSatuJ(false);
-    }
-  };
-  const cekJawaban1K = (jawaban1K) => {
-    if (jawaban1K.target.value === "x") {
-      setStyle1K({ border: "2px solid green" });
-      setJawabanSatuK(true);
-    } else {
-      setStyle1K({ border: "2px solid red" });
-      setJawabanSatuK(false);
-    }
-  };
-  const cekJawaban1L = (jawaban1L) => {
-    if (jawaban1L.target.value === "1") {
-      setStyle1L({ border: "2px solid green" });
-      setJawabanSatuL(true);
-    } else {
-      setStyle1L({ border: "2px solid red" });
-      setJawabanSatuL(false);
     }
   };
 
@@ -357,7 +284,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2B = (jawaban2B) => {
-    if (jawaban2B.target.value === "x+2") {
+    if (jawaban2B.target.value === "x") {
       setStyle2B({ border: "2px solid green" });
       setJawabanDuaB(true);
     } else {
@@ -366,7 +293,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2C = (jawaban2C) => {
-    if (jawaban2C.target.value === "0") {
+    if (jawaban2C.target.value === "-2") {
       setStyle2C({ border: "2px solid green" });
       setJawabanDuaC(true);
     } else {
@@ -375,7 +302,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2D = (jawaban2D) => {
-    if (jawaban2D.target.value === "x") {
+    if (jawaban2D.target.value === "-(x+2)") {
       setStyle2D({ border: "2px solid green" });
       setJawabanDuaD(true);
     } else {
@@ -384,7 +311,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2E = (jawaban2E) => {
-    if (jawaban2E.target.value === "-2") {
+    if (jawaban2E.target.value === "-x-2") {
       setStyle2E({ border: "2px solid green" });
       setJawabanDuaE(true);
     } else {
@@ -393,7 +320,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2F = (jawaban2F) => {
-    if (jawaban2F.target.value === "-(x+2)") {
+    if (jawaban2F.target.value === "x") {
       setStyle2F({ border: "2px solid green" });
       setJawabanDuaF(true);
     } else {
@@ -402,57 +329,12 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban2G = (jawaban2G) => {
-    if (jawaban2G.target.value === "-x-2") {
+    if (jawaban2G.target.value === "-2") {
       setStyle2G({ border: "2px solid green" });
       setJawabanDuaG(true);
     } else {
       setStyle2G({ border: "2px solid red" });
       setJawabanDuaG(false);
-    }
-  };
-  const cekJawaban2H = (jawaban2H) => {
-    if (jawaban2H.target.value === "0") {
-      setStyle2H({ border: "2px solid green" });
-      setJawabanDuaH(true);
-    } else {
-      setStyle2H({ border: "2px solid red" });
-      setJawabanDuaH(false);
-    }
-  };
-  const cekJawaban2I = (jawaban2I) => {
-    if (jawaban2I.target.value === "-x") {
-      setStyle2I({ border: "2px solid green" });
-      setJawabanDuaI(true);
-    } else {
-      setStyle2I({ border: "2px solid red" });
-      setJawabanDuaI(false);
-    }
-  };
-  const cekJawaban2J = (jawaban2J) => {
-    if (jawaban2J.target.value === "2") {
-      setStyle2J({ border: "2px solid green" });
-      setJawabanDuaJ(true);
-    } else {
-      setStyle2J({ border: "2px solid red" });
-      setJawabanDuaJ(false);
-    }
-  };
-  const cekJawaban2K = (jawaban2K) => {
-    if (jawaban2K.target.value === "x") {
-      setStyle2K({ border: "2px solid green" });
-      setJawabanDuaK(true);
-    } else {
-      setStyle2K({ border: "2px solid red" });
-      setJawabanDuaK(false);
-    }
-  };
-  const cekJawaban2L = (jawaban2L) => {
-    if (jawaban2L.target.value === "-2") {
-      setStyle2L({ border: "2px solid green" });
-      setJawabanDuaL(true);
-    } else {
-      setStyle2L({ border: "2px solid red" });
-      setJawabanDuaL(false);
     }
   };
 
@@ -467,7 +349,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban3B = (jawaban3B) => {
-    if (jawaban3B.target.value === "2x-8") {
+    if (jawaban3B.target.value === "x") {
       setStyle3B({ border: "2px solid green" });
       setJawabanTigaB(true);
     } else {
@@ -476,7 +358,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban3C = (jawaban3C) => {
-    if (jawaban3C.target.value === "0") {
+    if (jawaban3C.target.value === "4") {
       setStyle3C({ border: "2px solid green" });
       setJawabanTigaC(true);
     } else {
@@ -485,7 +367,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban3D = (jawaban3D) => {
-    if (jawaban3D.target.value === "2x") {
+    if (jawaban3D.target.value === "-(2x-8)") {
       setStyle3D({ border: "2px solid green" });
       setJawabanTigaD(true);
     } else {
@@ -494,7 +376,7 @@ export default function HalamanEnam() {
     }
   };
   const cekJawaban3E = (jawaban3E) => {
-    if (jawaban3E.target.value === "8") {
+    if (jawaban3E.target.value === "-2x+8") {
       setStyle3E({ border: "2px solid green" });
       setJawabanTigaE(true);
     } else {
@@ -518,69 +400,6 @@ export default function HalamanEnam() {
     } else {
       setStyle3G({ border: "2px solid red" });
       setJawabanTigaG(false);
-    }
-  };
-  const cekJawaban3H = (jawaban3H) => {
-    if (jawaban3H.target.value === "-(2x-8)") {
-      setStyle3H({ border: "2px solid green" });
-      setJawabanTigaH(true);
-    } else {
-      setStyle3H({ border: "2px solid red" });
-      setJawabanTigaH(false);
-    }
-  };
-  const cekJawaban3I = (jawaban3I) => {
-    if (jawaban3I.target.value === "-2x+8") {
-      setStyle3I({ border: "2px solid green" });
-      setJawabanTigaI(true);
-    } else {
-      setStyle3I({ border: "2px solid red" });
-      setJawabanTigaI(false);
-    }
-  };
-  const cekJawaban3J = (jawaban3J) => {
-    if (jawaban3J.target.value === "0") {
-      setStyle3J({ border: "2px solid green" });
-      setJawabanTigaJ(true);
-    } else {
-      setStyle3J({ border: "2px solid red" });
-      setJawabanTigaJ(false);
-    }
-  };
-  const cekJawaban3K = (jawaban3K) => {
-    if (jawaban3K.target.value === "-2x") {
-      setStyle3K({ border: "2px solid green" });
-      setJawabanTigaK(true);
-    } else {
-      setStyle3K({ border: "2px solid red" });
-      setJawabanTigaK(false);
-    }
-  };
-  const cekJawaban3L = (jawaban3L) => {
-    if (jawaban3L.target.value === "-8") {
-      setStyle3L({ border: "2px solid green" });
-      setJawabanTigaL(true);
-    } else {
-      setStyle3L({ border: "2px solid red" });
-      setJawabanTigaL(false);
-    }
-  };
-  const cekJawaban3M = (jawaban3M) => {
-    if (jawaban3M.target.value === "x") {
-      setStyle3M({ border: "2px solid green" });
-      setJawabanTigaM(true);
-    } else {
-      setStyle3M({ border: "2px solid red" });
-      setJawabanTigaM(false);
-    }
-  };
-  const cekJawaban3N = (jawaban3N) => {
-    if (jawaban3N.target.value === "4") {
-      setStyle3N({ border: "2px solid green" });
-      setJawabanTigaN(true);
-    } else {
-      setStyle3N({ border: "2px solid red" });
-      setJawabanTigaN(false);
     }
   };
 
@@ -1193,8 +1012,50 @@ export default function HalamanEnam() {
         </p>
         <div className="flex flex-col bg-white text-sm border-t-2 mt-2 border-trueGray-300">
           <a className="mt-3 text-white bg-indigo-300 w-full justify-center p-2 flex rounded-lg items-center font-bold mx-auto">
-            Mari Mencoba 3
+            Mari Mencoba
           </a>
+        </div>
+        <button
+          onClick={tooglePetunjuk}
+          className="w-max uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+        >
+          Petunjuk
+        </button>
+        <div
+          className={
+            "bg-cyan-500 w-full p-2 mt-2 text-white " +
+            (petunjuk ? "" : "hidden")
+          }
+        >
+          <ol className="list-decimal pl-3">
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Isi kotak kosong dengan jawaban anda
+                </span>
+                <img src="/materi/1.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Jika jawaban salah maka sisi kotak akan berwarna merah
+                </span>
+                <img src="/materi/2.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Jika jawaban benar maka sisi kotak akan berwarna hijau
+                </span>
+                <img src="/materi/3.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+          </ol>
         </div>
         <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 text-justify ">
           Gambarkan grafik dari fungsi berikut.
@@ -1234,7 +1095,7 @@ export default function HalamanEnam() {
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    ,
+                                    untuk ,
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(2)"
@@ -1255,53 +1116,34 @@ export default function HalamanEnam() {
                                       type="text"
                                     />
                                   </div>
-                                  <div
-                                    className={
-                                      jawabanSatuA &&
-                                      jawabanSatuB &&
-                                      jawabanSatuC
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
+
+                                  <div>
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(4)"
+                                      id="jawaban1.a(6)"
                                       autoComplete="off"
                                       style={style1D}
                                       onChange={cekJawaban1D}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    <InlineMath math="\ge" />
+                                    =
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(5)"
+                                      id="jawaban1.a(6)"
                                       autoComplete="off"
                                       style={style1E}
                                       onChange={cekJawaban1E}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                  </div>
-                                  <div>
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(6)"
-                                      autoComplete="off"
-                                      style={style1F}
-                                      onChange={cekJawaban1F}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    ,
+                                    untuk ,
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(7)"
                                       autoComplete="off"
-                                      style={style1G}
-                                      onChange={cekJawaban1G}
+                                      style={style1F}
+                                      onChange={cekJawaban1F}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -1310,70 +1152,8 @@ export default function HalamanEnam() {
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(8)"
                                       autoComplete="off"
-                                      style={style1H}
-                                      onChange={cekJawaban1H}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanSatuF &&
-                                      jawabanSatuG &&
-                                      jawabanSatuH
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(9)"
-                                      autoComplete="off"
-                                      style={style1I}
-                                      onChange={cekJawaban1I}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(10)"
-                                      autoComplete="off"
-                                      style={style1J}
-                                      onChange={cekJawaban1J}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanSatuF &&
-                                      jawabanSatuG &&
-                                      jawabanSatuH &&
-                                      jawabanSatuI &&
-                                      jawabanSatuJ
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(11)"
-                                      autoComplete="off"
-                                      style={style1K}
-                                      onChange={cekJawaban1K}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.a(12)"
-                                      style={style1L}
-                                      autoComplete="off"
-                                      onChange={cekJawaban1L}
+                                      style={style1G}
+                                      onChange={cekJawaban1G}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -1388,10 +1168,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "pt-2 " +
-                        (jawabanSatuD &&
+                        (jawabanSatuA &&
+                        jawabanSatuB &&
+                        jawabanSatuC &&
+                        jawabanSatuD &&
                         jawabanSatuE &&
-                        jawabanSatuK &&
-                        jawabanSatuL
+                        jawabanSatuF &&
+                        jawabanSatuG
                           ? ""
                           : "hidden")
                       }
@@ -1402,10 +1185,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-2 " +
-                        (jawabanSatuD &&
+                        (jawabanSatuA &&
+                        jawabanSatuB &&
+                        jawabanSatuC &&
+                        jawabanSatuD &&
                         jawabanSatuE &&
-                        jawabanSatuK &&
-                        jawabanSatuL
+                        jawabanSatuF &&
+                        jawabanSatuG
                           ? ""
                           : "hidden")
                       }
@@ -1417,10 +1203,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-4 " +
-                        (jawabanSatuD &&
+                        (jawabanSatuA &&
+                        jawabanSatuB &&
+                        jawabanSatuC &&
+                        jawabanSatuD &&
                         jawabanSatuE &&
-                        jawabanSatuK &&
-                        jawabanSatuL
+                        jawabanSatuF &&
+                        jawabanSatuG
                           ? ""
                           : "hidden")
                       }
@@ -1953,7 +1742,7 @@ export default function HalamanEnam() {
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    ,
+                                    untuk ,
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.b(2)"
@@ -1974,51 +1763,34 @@ export default function HalamanEnam() {
                                       type="text"
                                     />
                                   </div>
-                                  <div
-                                    className={
-                                      jawabanDuaA && jawabanDuaB && jawabanDuaC
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
+
+                                  <div>
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(4)"
+                                      id="jawaban1.b(6)"
                                       style={style2D}
                                       autoComplete="off"
                                       onChange={cekJawaban2D}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    <InlineMath math="\ge" />
+                                    =
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(5)"
+                                      id="jawaban1.b(6)"
                                       style={style2E}
                                       autoComplete="off"
                                       onChange={cekJawaban2E}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                  </div>
-                                  <div>
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(6)"
-                                      style={style2F}
-                                      autoComplete="off"
-                                      onChange={cekJawaban2F}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    ,
+                                    ,untuk
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.b(7)"
-                                      style={style2G}
+                                      style={style2F}
                                       autoComplete="off"
-                                      onChange={cekJawaban2G}
+                                      onChange={cekJawaban2F}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -2026,69 +1798,9 @@ export default function HalamanEnam() {
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.b(8)"
-                                      style={style2H}
+                                      style={style2G}
                                       autoComplete="off"
-                                      onChange={cekJawaban2H}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanDuaF && jawabanDuaG && jawabanDuaH
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(9)"
-                                      style={style2I}
-                                      autoComplete="off"
-                                      onChange={cekJawaban2I}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(10)"
-                                      style={style2J}
-                                      autoComplete="off"
-                                      onChange={cekJawaban2J}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanDuaF &&
-                                      jawabanDuaG &&
-                                      jawabanDuaH &&
-                                      jawabanDuaI &&
-                                      jawabanDuaJ
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(11)"
-                                      style={style2K}
-                                      autoComplete="off"
-                                      onChange={cekJawaban2K}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.b(12)"
-                                      style={style2L}
-                                      autoComplete="off"
-                                      onChange={cekJawaban2L}
+                                      onChange={cekJawaban2G}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -2103,10 +1815,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "pt-2 " +
-                        (jawabanDuaD &&
+                        (jawabanDuaA &&
+                        jawabanDuaB &&
+                        jawabanDuaC &&
+                        jawabanDuaD &&
                         jawabanDuaE &&
-                        jawabanDuaK &&
-                        jawabanDuaL
+                        jawabanDuaF &&
+                        jawabanDuaG
                           ? ""
                           : "hidden")
                       }
@@ -2117,10 +1832,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-2 " +
-                        (jawabanDuaD &&
+                        (jawabanDuaA &&
+                        jawabanDuaB &&
+                        jawabanDuaC &&
+                        jawabanDuaD &&
                         jawabanDuaE &&
-                        jawabanDuaK &&
-                        jawabanDuaL
+                        jawabanDuaF &&
+                        jawabanDuaG
                           ? ""
                           : "hidden")
                       }
@@ -2132,10 +1850,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-4 " +
-                        (jawabanDuaD &&
+                        (jawabanDuaA &&
+                        jawabanDuaB &&
+                        jawabanDuaC &&
+                        jawabanDuaD &&
                         jawabanDuaE &&
-                        jawabanDuaK &&
-                        jawabanDuaL
+                        jawabanDuaF &&
+                        jawabanDuaG
                           ? ""
                           : "hidden")
                       }
@@ -2667,7 +2388,7 @@ export default function HalamanEnam() {
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    ,
+                                    , untuk
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.c(2)"
@@ -2688,86 +2409,34 @@ export default function HalamanEnam() {
                                       type="text"
                                     />
                                   </div>
-                                  <div
-                                    className={
-                                      jawabanTigaA &&
-                                      jawabanTigaB &&
-                                      jawabanTigaC
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
+
+                                  <div>
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(4)"
+                                      id="jawaban1.c(8)"
                                       style={style3D}
                                       autoComplete="off"
                                       onChange={cekJawaban3D}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                    <InlineMath math="\ge" />
+                                    =
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(5)"
+                                      id="jawaban1.c(8)"
                                       style={style3E}
                                       autoComplete="off"
                                       onChange={cekJawaban3E}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanTigaA &&
-                                      jawabanTigaB &&
-                                      jawabanTigaC &&
-                                      jawabanTigaD &&
-                                      jawabanTigaE
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(6)"
-                                      style={style3F}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3F}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath>\ge</InlineMath>
-
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(7)"
-                                      style={style3G}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3G}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div>
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(8)"
-                                      style={style3H}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3H}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    ,
+                                    , untuk
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.c(9)"
-                                      style={style3I}
+                                      style={style3F}
                                       autoComplete="off"
-                                      onChange={cekJawaban3I}
+                                      onChange={cekJawaban3F}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -2775,71 +2444,9 @@ export default function HalamanEnam() {
                                     <input
                                       className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.c(10)"
-                                      style={style3J}
+                                      style={style3G}
                                       autoComplete="off"
-                                      onChange={cekJawaban3J}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanTigaH &&
-                                      jawabanTigaI &&
-                                      jawabanTigaJ
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(11)"
-                                      style={style3K}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3K}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(12)"
-                                      style={style3L}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3L}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                  </div>
-                                  <div
-                                    className={
-                                      jawabanTigaH &&
-                                      jawabanTigaI &&
-                                      jawabanTigaJ &&
-                                      jawabanTigaK &&
-                                      jawabanTigaL
-                                        ? ""
-                                        : "hidden"
-                                    }
-                                  >
-                                    <InlineMath math="\hspace{1.73cm}" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(13)"
-                                      style={style3M}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3M}
-                                      placeholder=". . . . . . . ."
-                                      type="text"
-                                    />
-                                    <InlineMath math="\lt" />
-                                    <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
-                                      id="jawaban1.c(14)"
-                                      style={style3N}
-                                      autoComplete="off"
-                                      onChange={cekJawaban3N}
+                                      onChange={cekJawaban3G}
                                       placeholder=". . . . . . . ."
                                       type="text"
                                     />
@@ -2854,10 +2461,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "pt-2 " +
-                        (jawabanTigaF &&
-                        jawabanTigaG &&
-                        jawabanTigaM &&
-                        jawabanTigaN
+                        (jawabanTigaA &&
+                        jawabanTigaB &&
+                        jawabanTigaC &&
+                        jawabanTigaD &&
+                        jawabanTigaE &&
+                        jawabanTigaF &&
+                        jawabanTigaG
                           ? ""
                           : "hidden")
                       }
@@ -2868,10 +2478,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-2 " +
-                        (jawabanTigaF &&
-                        jawabanTigaG &&
-                        jawabanTigaM &&
-                        jawabanTigaN
+                        (jawabanTigaA &&
+                        jawabanTigaB &&
+                        jawabanTigaC &&
+                        jawabanTigaD &&
+                        jawabanTigaE &&
+                        jawabanTigaF &&
+                        jawabanTigaG
                           ? ""
                           : "hidden")
                       }
@@ -2883,10 +2496,13 @@ export default function HalamanEnam() {
                     <li
                       className={
                         "py-4 " +
-                        (jawabanTigaF &&
-                        jawabanTigaG &&
-                        jawabanTigaM &&
-                        jawabanTigaN
+                        (jawabanTigaA &&
+                        jawabanTigaB &&
+                        jawabanTigaC &&
+                        jawabanTigaD &&
+                        jawabanTigaE &&
+                        jawabanTigaF &&
+                        jawabanTigaG
                           ? ""
                           : "hidden")
                       }

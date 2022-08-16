@@ -663,7 +663,7 @@ export default function HalamanDua() {
               </p>
               <p className="text-justify py-2">
                 {" "}
-                <InlineMath math="(\sqrt{(3x+2)^2} \le 4)^2" />{" "}
+                <InlineMath math="(\sqrt{(3x+2)^2})^2 \le (4)^2" />{" "}
                 <span className="ml-28">(Kuadratkan kedua sisi)</span>
               </p>
               <p className="text-justify py-2">
@@ -673,7 +673,7 @@ export default function HalamanDua() {
                 {" "}
                 <InlineMath math="(3x+2)^2 - 4^2 \le 0" />
                 <span className="ml-32">
-                  (Pindah ruas <InlineMath>4^2</InlineMath> )
+                  ( <InlineMath>4^2</InlineMath> pindah ruas ke kiri )
                 </span>
               </p>
               <p className="text-justify py-2">
@@ -786,12 +786,12 @@ export default function HalamanDua() {
                         placeholder=". . . . . . . . "
                         autoComplete="off"
                       />
-                      <InlineMath math=")^2" />
+                      <InlineMath math=")^2)^2" />
 
                       <a className="mx-4">
                         <InlineMath math="\ge" />
                       </a>
-                      <InlineMath math=" \sqrt{}(" />
+                      <InlineMath math=" (\sqrt{}(" />
                       <input
                         className="bg-gray-200 appearance-none border-2 border-gray-200 rounded-lg w-16 p-1 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
                         id="jawaban-2(4)"

@@ -134,7 +134,7 @@ export const soal = [
   {
     idSoal: 10,
     butirSoal:
-      "\\scriptsize \\text{Berapakah titik puncak dari grafik fungsi } f(x) = |18-3x| \\text{ ....}",
+      "\\scriptsize \\text{Titik puncak dari grafik fungsi } f(x) = |18-3x| \\text{ adalah ....}",
     opsiJawaban: [
       { poin: "A", opsi: "(0,5)", isCorrect: false },
       { poin: "B", opsi: "(4,0)", isCorrect: false },
