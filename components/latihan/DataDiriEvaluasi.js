@@ -114,7 +114,7 @@ const DataDiriEvaluasi = (props) => {
                         value="Masuk"
                         className="bg-cyan-500 text-white font-semibold shadow-md py-1 px-2 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500 cursor-pointer"
                       />
-                      <Link href="/materiBabSatu">
+                      <Link href="/materiBabTiga">
                         <button className="bg-cyan-500 text-white font-semibold shadow-md py-1 px-2 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500 cursor-pointer">
                           Kembali Ke Materi
                         </button>

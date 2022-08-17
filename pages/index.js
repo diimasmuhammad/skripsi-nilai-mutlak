@@ -107,7 +107,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex p-6 ">
-                <Link href="/materiBabSatu">
+                <Link href="/petaKonsep">
                   <button
                     type="button"
                     className="flex-1 bg-cyan-500 text-white font-semibold shadow-md py-3 mt-12 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500"

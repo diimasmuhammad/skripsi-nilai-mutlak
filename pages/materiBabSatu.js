@@ -12,15 +12,15 @@ import HalamanEnam from "../components/materi/babSatu/halamanEnam";
 export default function materiBabDua() {
   const [bukaHalamanBabSatu, setHalamanBabSatu] = useState(1);
 
-  useEffect(() => {
-    setHalamanBabSatu(
-      JSON.parse(window.localStorage.getItem("bukaHalamanBabSatu"))
-    );
-  }, []);
+  // useEffect(() => {
+  //   setHalamanBabSatu(
+  //     JSON.parse(window.localStorage.getItem("bukaHalamanBabSatu"))
+  //   );
+  // }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem("bukaHalamanBabSatu", bukaHalamanBabSatu);
-  }, [bukaHalamanBabSatu]);
+  // useEffect(() => {
+  //   window.localStorage.setItem("bukaHalamanBabSatu", bukaHalamanBabSatu);
+  // }, [bukaHalamanBabSatu]);
 
   return (
     <DashboardMateri>

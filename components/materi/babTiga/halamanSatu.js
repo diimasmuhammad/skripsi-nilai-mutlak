@@ -75,7 +75,7 @@ export default function HalamanSatu() {
             className="text-white mt-3 bg-indigo-300 w-full justify-center h-10 p-2 flex rounded-lg items-center font-bold hover:bg-white hover:text-indigo-300 hover:ring-2 hover:ring-indigo-300"
             onClick={() => setBukaPenyelesaianSatu(!bukaPenyelesaianSatu)}
           >
-            Penyelesaian 3.1
+            Penyelesaian 3.1 (Klik Saya)
           </button>
           <div
             className={

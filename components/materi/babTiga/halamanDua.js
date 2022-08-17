@@ -5,11 +5,21 @@ import { useState } from "react";
 import { Hidden } from "@mui/material";
 
 export default function HalamanDua() {
+  const [petunjukSatu, setPetunjukSatu] = useState(false);
+  const [petunjukDua, setPetunjukDua] = useState(false);
+
   const [bukaTab, setBukaTab] = useState(1);
   const [bukaMariMencobaSatu, setBukaMariMencobaSatu] = useState(false);
   const [bukaMariMencobaDua, setBukaMariMencobaDua] = useState(false);
   const [bukaContohSatu, setBukaContohSatu] = useState(false);
   const [bukaContohDua, setBukaContohDua] = useState(false);
+
+  const tooglePetunjukSatu = () => {
+    setPetunjukSatu(!petunjukSatu);
+  };
+  const tooglePetunjukDua = () => {
+    setPetunjukDua(!petunjukDua);
+  };
 
   // Save state mari mencoba cara 1
   const [box1A, setBox1A] = useState({});
@@ -344,7 +354,7 @@ export default function HalamanDua() {
               className=" rounded-lg bg-indigo-300 text-white hover:text-indigo-300 focus:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-r-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100 focus:bg-gray-100 focus:border-indigo-300 cursor-pointer "
               onClick={() => setBukaTab(1)}
             >
-              Cara 1
+              Cara 1 (Klik Saya)
             </button>
           </li>
 
@@ -354,7 +364,7 @@ export default function HalamanDua() {
               bg-indigo-300 text-white hover:text-indigo-300 focus:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-l-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100 focus:bg-gray-100 focus:border-indigo-300 cursor-pointer "
               onClick={() => setBukaTab(2)}
             >
-              Cara 2
+              Cara 2 (Klik Saya)
             </button>
           </li>
         </ul>
@@ -398,7 +408,7 @@ export default function HalamanDua() {
             className="text-white justify-center bg-indigo-300 w-full h-10 p-2 mt-2 flex rounded-lg items-center font-bold hover:bg-white hover:text-indigo-300 hover:ring-2 hover:ring-indigo-300"
             onClick={() => setBukaContohSatu(!bukaContohSatu)}
           >
-            Contoh Soal
+            Contoh Soal (Klik Saya)
           </button>
           {/* Contoh Soal Cara 1 */}
           <div className={"" + (bukaContohSatu ? "" : "hidden")}>
@@ -449,7 +459,7 @@ export default function HalamanDua() {
               className="text-white justify-center bg-indigo-300 w-full h-10 p-2 mt-2 flex rounded-lg items-center font-bold hover:bg-white hover:text-indigo-300 hover:ring-2 hover:ring-indigo-300"
               onClick={() => setBukaMariMencobaSatu(!bukaMariMencobaSatu)}
             >
-              Mari Mencoba
+              Mari Mencoba (Klik Saya)
             </button>
             <div
               className={
@@ -457,6 +467,59 @@ export default function HalamanDua() {
                 (bukaMariMencobaSatu ? "" : "hidden")
               }
             >
+              <div>
+                <button
+                  onClick={tooglePetunjukSatu}
+                  className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+                >
+                  Petunjuk (klik saya)
+                </button>
+              </div>
+              <div
+                className={
+                  "bg-cyan-500 w-full p-2 mt-2 text-white " +
+                  (petunjukSatu ? "" : "hidden")
+                }
+              >
+                <ol className="list-decimal pl-3">
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Isi kotak kosong dengan jawaban anda
+                      </span>
+                      <img
+                        src="/materi/1.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Jika jawaban salah maka sisi kotak akan berwarna merah
+                      </span>
+                      <img
+                        src="/materi/2.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Jika jawaban benar maka sisi kotak akan berwarna hijau
+                      </span>
+                      <img
+                        src="/materi/3.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                </ol>
+              </div>
               <ol className="list-outside list-decimal">
                 <li>
                   Tentukan himpunan penyelesaian dari pertidaksamaan{" "}
@@ -640,7 +703,7 @@ export default function HalamanDua() {
             className="text-white mx-auto bg-indigo-300 w-full justify-center h-10 p-2 mt-2 flex rounded-lg items-center font-bold hover:bg-white hover:text-indigo-300 hover:ring-2 hover:ring-indigo-300"
             onClick={() => setBukaContohDua(!bukaContohDua)}
           >
-            Contoh Soal
+            Contoh Soal (Klik Saya)
           </button>
           <div className={" " + (bukaContohDua ? "" : "hidden")}>
             <div className="p-3 pl-5 mt-2 text-sm border-2 border-trueGray-300 flex flex-col gap-2 ">
@@ -718,7 +781,7 @@ export default function HalamanDua() {
               className="text-white justify-center bg-indigo-300 w-full h-10 p-2 mt-2 flex rounded-lg items-center font-bold hover:bg-white hover:text-indigo-300 hover:ring-2 hover:ring-indigo-300"
               onClick={() => setBukaMariMencobaDua(!bukaMariMencobaDua)}
             >
-              Mari Mencoba
+              Mari Mencoba (Klik Saya)
             </button>
             <div
               className={
@@ -726,6 +789,59 @@ export default function HalamanDua() {
                 (bukaMariMencobaDua ? "" : "hidden")
               }
             >
+              <div>
+                <button
+                  onClick={tooglePetunjukDua}
+                  className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+                >
+                  Petunjuk (klik saya)
+                </button>
+              </div>
+              <div
+                className={
+                  "bg-cyan-500 w-full p-2 mt-2 text-white " +
+                  (petunjukDua ? "" : "hidden")
+                }
+              >
+                <ol className="list-decimal pl-3">
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Isi kotak kosong dengan jawaban anda
+                      </span>
+                      <img
+                        src="/materi/1.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Jika jawaban salah maka sisi kotak akan berwarna merah
+                      </span>
+                      <img
+                        src="/materi/2.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex  items-center">
+                      {" "}
+                      <span className="mr-4">
+                        Jika jawaban benar maka sisi kotak akan berwarna hijau
+                      </span>
+                      <img
+                        src="/materi/3.png"
+                        className="rounded-full w-20 h-14"
+                      />
+                    </div>
+                  </li>
+                </ol>
+              </div>
               <ol className="list-outside list-decimal">
                 <li>
                   {" "}

@@ -8,8 +8,8 @@ export default function Kompetensidasar() {
   return (
     <Layout>
       <section className="relative bg-trueGray-200">
-        <div className="flex items-center justify-center mb-24 mt-16">
-          <div className="flex flex-col bg-white shadow-lg p-8 rounded-lg w-3/5">
+        <div className="flex items-center justify-center mb-16 mt-10">
+          <div className="flex flex-col bg-white shadow-lg p-8 rounded-lg w-full mx-auto sm:mx-64">
             <div className=" py-3 flex justify-center">
               <Image src="/education.svg" width={64} height={64}></Image>
             </div>

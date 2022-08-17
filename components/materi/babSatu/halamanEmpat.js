@@ -460,7 +460,7 @@ export default function HalamanEmpat() {
               onClick={tooglePetunjuk}
               className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
             >
-              Petunjuk
+              Petunjuk (klik saya)
             </button>
           </div>
           <div

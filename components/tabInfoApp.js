@@ -34,38 +34,31 @@ export default function TabInfoApp() {
           </div>
         </div>
         {/* Konten */}
-        <div className="flex justify-center text-justify p-4 mt-2 border border-indigo-200 rounded-lg shadow-xl overflow-auto h-80 w-screen">
+        <div className="flex justify-center text-justify p-4 mt-2 border border-indigo-200 rounded-lg shadow-xl overflow-auto h-96 sm:h-80 w-max">
           {/* Konten Tab 1 */}
-          <div className={"pb-5 " + (bukaTab === 1 ? "block" : "hidden")}>
+          <div
+            className={
+              "pb-5 overflow-visible  " + (bukaTab === 1 ? "block" : "hidden")
+            }
+          >
             <h1 className="font-bold uppercase text-xl text-center">
               Daftar Pustaka
             </h1>
             <p className="py-4">
-              Media pembelajaran ini dibuat untuk memenuhi persyaratan dalam
-              menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul
-              tugas akhir : "Pengembangan Media Pembelajaran Interaktif Berbasis
-              Web pada Materi Persamaan dan Pertidaksamaan Nilai Mutlak Linear
-              Satu Variabel dengan Metode Drill and Practice"
+              Noormandiri, B. K. (2016). Matematika Jilid 1 untuk SMA/MA Kelas X
+              Kelompok Wajib. Jakarta: Penerbit Erlangga.
             </p>
             <p className="py-4">
-              Media pembelajaran ini dibuat untuk memenuhi persyaratan dalam
-              menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul
-              tugas akhir : "Pengembangan Media Pembelajaran Interaktif Berbasis
-              Web pada Materi Persamaan dan Pertidaksamaan Nilai Mutlak Linear
-              Satu Variabel dengan Metode Drill and Practice"
-            </p>
-            <p className="py-4">
-              Media pembelajaran ini dibuat untuk memenuhi persyaratan dalam
-              menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul
-              tugas akhir : "Pengembangan Media Pembelajaran Interaktif Berbasis
-              Web pada Materi Persamaan dan Pertidaksamaan Nilai Mutlak Linear
-              Satu Variabel dengan Metode Drill and Practice"
+              Sinaga, B., Sinambela, P. N., Sitanggang, A. K., Hutapea, T. A.,
+              Manulang, S., Sinaga, L. P., & Simanjorang, M. (2017). Matematika
+              SMA/MA/SMK/MAK KELAS X. Jakarta: Pusat Kurikulum dan Perbukuan,
+              Balitbang, Kemendikbud.
             </p>
           </div>
           {/* Konten Tab 2 */}
           <div className={"pb-5 " + (bukaTab === 2 ? "block" : "hidden")}>
             <h1 className="font-bold uppercase text-xl text-center">Perihal</h1>
-            <p className="text-center py-4">
+            <p className=" text-center py-4">
               Media pembelajaran ini dibuat untuk memenuhi persyaratan dalam
               menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul
               tugas akhir : "Pengembangan Media Pembelajaran Interaktif Berbasis
@@ -76,45 +69,43 @@ export default function TabInfoApp() {
             <h1 className="font-bold uppercase text-xl text-center">
               Tentang Author
             </h1>{" "}
-            <table className="table-fixed">
-              <tbody>
-                <tr>
-                  <td className="px-4">Nama</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">Dimas Maulana Muhammad</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Email</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">diimasmuhammad@gmail.com</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Dosen Pembimbing 1</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">Dr. Harja Santanapurba, M.Kom.</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Dosen Pembimbing 2</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">Asdini Sari, M.Pd</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Program Studi</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">S-1 Pendidikan Komputer</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Fakultas</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">Keguruan dan Ilmu Pendidikan</td>
-                </tr>
-                <tr>
-                  <td className="px-4">Instansi</td>
-                  <td className="px-4">:</td>
-                  <td className="px-4">Universitas Lambung Mangkurat</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Nama</div>
+                <div className="">:</div>
+                <div>Dimas Maulana Muhammad</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Email</div>
+                <div className=" ">:</div>
+                <div>diimasmuhammad@gmail</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Dosen Pembimbing 1</div>
+                <div className=" ">:</div>
+                <div>Dr. Harja Santanapurba, M.Kom.</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Dosen Pembimbing 2</div>
+                <div className=" ">:</div>
+                <div>Asdini Sari, M.Pd</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Program Studi</div>
+                <div className=" ">:</div>
+                <div>S-1 Pendidikan Komputer</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Fakultas</div>
+                <div className=" ">:</div>
+                <div>Keguruan dan Ilmu Pendidkan</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 text-center sm:text-justify">
+                <div className="font-bold">Instansi</div>
+                <div className=" ">:</div>
+                <div>Universitas Lambung Mangkurat</div>
+              </div>
+            </div>
           </div>
           {/* Konten Tab 3 */}
           <div

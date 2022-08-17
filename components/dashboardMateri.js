@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export default function DashboardMateri(props) {
+  const [btnPetaKonsep, setbtnPetaKonsep] = useState(false);
   const [btnSatu, setBtnSatu] = useState(false);
   const [btnDua, setBtnDua] = useState(false);
   const [btnTiga, setBtnTiga] = useState(false);
@@ -93,6 +94,11 @@ export default function DashboardMateri(props) {
             >
               <div className="mx-2 mt-2 text-white tracking-tight">
                 <nav>
+                  <Link href={"/petaKonsep"}>
+                    <a className="font-bold cursor-pointer tracking-wide text-base focus:rounded-xl focus:bg-white focus:text-cyan-500 flex justify-between transition-all duration-300 ease-linear py-3 px-2 hover:rounded-xl hover:bg-white hover:text-cyan-500">
+                      Peta Konsep
+                    </a>
+                  </Link>
                   <a
                     className="cursor-pointer tracking-normal font-bold text-sm flex justify-between py-4 px-2 transition-all duration-300 ease-linear hover:rounded-xl hover:bg-white hover:text-cyan-500 "
                     onClick={() => {

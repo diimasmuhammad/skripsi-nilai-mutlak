@@ -4,6 +4,7 @@ import { InlineMath } from "react-katex";
 import { useState } from "react";
 
 export default function HalamanDua() {
+  const [petunjuk, setPetunjuk] = useState(false);
   // Save State soal 1.a
   const [style1A, setStyle1A] = useState({});
   const [style1B, setStyle1B] = useState({});
@@ -55,6 +56,10 @@ export default function HalamanDua() {
   const [jawabanDuaI, setjawabanDuaI] = useState(false);
   const [jawabanDuaJ, setjawabanDuaJ] = useState(false);
   const [jawabanDuaK, setjawabanDuaK] = useState(false);
+
+  const tooglePetunjuk = () => {
+    setPetunjuk(!petunjuk);
+  };
 
   // Function cek jawaban soal 1.a
   const cekJawaban1A = (jawaban1A) => {
@@ -351,6 +356,50 @@ export default function HalamanDua() {
         <a className="text-white bg-indigo-300 w-full justify-center  p-2 flex rounded-lg items-center font-bold mt-2 mx-auto">
           Mari mencoba
         </a>
+        <div>
+          <button
+            onClick={tooglePetunjuk}
+            className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
+          >
+            Petunjuk (klik saya)
+          </button>
+        </div>
+        <div
+          className={
+            "bg-cyan-500 w-full p-2 mt-2 text-white " +
+            (petunjuk ? "" : "hidden")
+          }
+        >
+          <ol className="list-decimal pl-3">
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Isi kotak kosong dengan jawaban anda
+                </span>
+                <img src="/materi/1.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Jika jawaban salah maka sisi kotak akan berwarna merah
+                </span>
+                <img src="/materi/2.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">
+                  Jika jawaban benar maka sisi kotak akan berwarna hijau
+                </span>
+                <img src="/materi/3.png" className="rounded-full w-20 h-14" />
+              </div>
+            </li>
+          </ol>
+        </div>
         <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 flex flex-col gap-2">
           <ol className="list-decimal list-outside flex flex-col gap-2 ml-1">
             {/* Soal 1 */}

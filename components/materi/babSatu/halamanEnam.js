@@ -1019,7 +1019,7 @@ export default function HalamanEnam() {
           onClick={tooglePetunjuk}
           className="w-max uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
         >
-          Petunjuk
+          Petunjuk (Klik saya)
         </button>
         <div
           className={
@@ -1028,6 +1028,13 @@ export default function HalamanEnam() {
           }
         >
           <ol className="list-decimal pl-3">
+            <li>
+              <div className="flex  items-center">
+                {" "}
+                <span className="mr-4">Kerjakan sesuai contoh sebelumnya</span>
+              </div>
+            </li>
+
             <li>
               <div className="flex  items-center">
                 {" "}
