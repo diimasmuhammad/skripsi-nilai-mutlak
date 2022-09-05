@@ -5,6 +5,9 @@ import ListLatihanDua from "../components/guru/listsiswa/listLatihanDua";
 import ListLatihanTiga from "../components/guru/listsiswa/listLatihanTiga";
 import Evaluasi from "../components/guru/listsiswa/listEvaluasi";
 import { useState } from "react";
+import { useRouter } from "next/router";
+import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
+import { useEffect } from "react";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default function hasilBelajarSiswa() {
@@ -16,6 +19,17 @@ export default function hasilBelajarSiswa() {
   const [opsiTiga, setOpsiTiga] = useState(false);
   const [opsiEmpat, setOpsiEmpat] = useState(false);
   const [opsiSekolah, setOpsiSekolah] = useState(false);
+  const [pengguna, setPengguna] = useState({});
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const accessToken = userAccessToken();
+    if (!accessToken) return router.push("/");
+    const [userInfo] = fetchUser();
+
+    setPengguna(userInfo);
+  }, []);
 
   // const gantiOpsiSatu = (isiOpsiSatu) => {
   //   if (isiOpsiSatu.target.value === "Latihan Bab Satu") {

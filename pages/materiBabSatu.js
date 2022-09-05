@@ -69,7 +69,7 @@ export default function materiBabDua() {
           </div>
         </div>
         <div className="">
-          <div className="flex text-base">
+          <div className="flex text-base ">
             <div className="absolute bottom-0 mb-2 -ml-2">
               {bukaHalamanBabSatu <= 1 ? (
                 <Link href="/">
@@ -88,6 +88,64 @@ export default function materiBabDua() {
                   Sebelumnya
                 </button>
               )}
+            </div>
+            <div className="absolute bottom-0 ml-28 sm:ml-130 mb-2">
+              <div className="grid grid-cols-6 gap-2 ">
+                <button
+                  onClick={() => setHalamanBabSatu(1)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 1 ? " bg-cyan-500" : "")
+                  }
+                >
+                  1
+                </button>
+                <button
+                  onClick={() => setHalamanBabSatu(2)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 2 ? " bg-cyan-500" : "")
+                  }
+                >
+                  2
+                </button>
+                <button
+                  onClick={() => setHalamanBabSatu(3)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 3 ? " bg-cyan-500" : "")
+                  }
+                >
+                  3
+                </button>
+                <button
+                  onClick={() => setHalamanBabSatu(4)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 4 ? " bg-cyan-500" : "")
+                  }
+                >
+                  4
+                </button>
+                <button
+                  onClick={() => setHalamanBabSatu(5)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 5 ? " bg-cyan-500" : "")
+                  }
+                >
+                  5
+                </button>
+                <button
+                  onClick={() => setHalamanBabSatu(6)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabSatu == 6 ? " bg-cyan-500" : "")
+                  }
+                >
+                  6
+                </button>
+              </div>
             </div>
             <div className="absolute bottom-0 right-0 mr-8 mb-2">
               {bukaHalamanBabSatu >= 6 ? (

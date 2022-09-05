@@ -34,6 +34,12 @@ module.exports = {
         side: "93vh",
         kontenSmall: "74vh",
       }),
+      spacing: {
+        "128": "32rem",
+        "130": "34rem",
+        "144": "36rem",
+        "166": "38rem",
+      },
       width: (theme) => ({
         latihansm: "100vh",
         latihan: "150vh",

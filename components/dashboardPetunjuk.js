@@ -12,7 +12,7 @@ export default function DashboardPetunjuk(props) {
       {/* Header */}
       <div className="flex flex-col uppercase text-xs md:text-base font-normal sm:text-base sm:font-semibold">
         <div className="flex justify-between fixed inset-x-0 h-12 top-0 bg-cyan-600 text-white items-center border-b-2 border-white">
-          <div className="flex ml-3">
+          {/* <div className="flex ml-3">
             <a
               className="flex justify-between items-center gap-8 px-2 py-1 hover:bg-white hover:text-cyan-500 hover:rounded-lg cursor-pointer"
               onClick={() => setBtnToogle(!btnToogle)}
@@ -40,7 +40,7 @@ export default function DashboardPetunjuk(props) {
                 </svg>
               )}
             </a>
-          </div>
+          </div> */}
           <div className="flex mx-auto">
             <Link href="/">
               <a className="flex items-center p-2">
@@ -60,7 +60,7 @@ export default function DashboardPetunjuk(props) {
       </div>
       <div className="flex flex-row">
         {/* Side Bar */}
-        <div className="flex">
+        {/* <div className="flex">
           <>
             <div
               className={
@@ -203,7 +203,7 @@ export default function DashboardPetunjuk(props) {
               </div>
             </div>
           </>
-        </div>
+        </div> */}
         {/* Konten */}
         <div className="flex flex-col w-screen h-latihan overflow-auto text-2xl p-2 shadow-2xl rounded-lg border-t-4 border-b-4 border-indigo-500 m-4 select-none ">
           {props.children}

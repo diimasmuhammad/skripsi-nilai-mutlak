@@ -1,11 +1,24 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
 
 export default function DashboardHalamanGuru(props) {
   const [open, setOpen] = useState(true);
 
+  const [pengguna, setPengguna] = useState("");
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const accessToken = userAccessToken();
+    if (!accessToken) return router.push("/");
+    const [userInfo] = fetchUser();
+
+    setPengguna(userInfo);
+  }, []);
   return (
     // sidebar
     <div className="flex bg-gray-200 ">
@@ -121,7 +134,14 @@ export default function DashboardHalamanGuru(props) {
               <a className="text-white uppercase">Halaman Guru </a>
             </Link>
 
-            <div className="text-white"> Profil </div>
+            <div className="text-white flex justify-center items-center gap-2">
+              <img
+                className="rounded-full w-12 h-10"
+                src={pengguna?.photoURL}
+                alt=""
+              />
+              <p className="text-sm">{pengguna.email}</p>
+            </div>
           </div>
           <div>{props.children}</div>
         </div>

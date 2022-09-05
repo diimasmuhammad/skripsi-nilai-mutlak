@@ -1,9 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
 
 export default function HeaderDashboard() {
   const [btnToogle, setBtnToogle] = useState(false);
+  const [pengguna, setPengguna] = useState({});
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const accessToken = userAccessToken();
+    if (!accessToken) return router.push("/");
+    const userInfo = fetchUser();
+
+    console.log(userInfo);
+    setPengguna(userInfo);
+  }, []);
   return (
     <div className="flex justify-between fixed inset-x-0 h-12 top-0 bg-cyan-500 text-white items-center border-b-2 border-white">
       <div className="flex ml-8">
@@ -43,7 +57,9 @@ export default function HeaderDashboard() {
           </a>
         </Link>
       </div>
-      <div className="flex mr-8">Profil</div>
+      <div className="flex mr-8">
+        <img src={pengguna?.photoURL} alt="" />
+      </div>
     </div>
   );
 }

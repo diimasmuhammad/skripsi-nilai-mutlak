@@ -12,21 +12,30 @@ export default function TabInfoApp() {
           <div className="flex items-center border-b border-indigo-400 py-5 h-10">
             {/* Tab 1 */}
             <button
-              className="block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-r border-indigo-400 outline-none cursor-pointer"
+              className={
+                "block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-r border-indigo-400 outline-none cursor-pointer" +
+                (bukaTab === 1 ? " bg-sky-200" : "")
+              }
               onClick={() => setBukaTab(1)}
             >
               Daftar Pustaka
             </button>
             {/* Tab 2 */}
             <button
-              className="block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-r border-indigo-400 outline-none cursor-pointer"
+              className={
+                "block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-r border-indigo-400 outline-none cursor-pointer" +
+                (bukaTab === 2 ? " bg-sky-200" : "")
+              }
               onClick={() => setBukaTab(2)}
             >
               Informasi Aplikasi
             </button>
             {/* Tab 3 */}
             <button
-              className="block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-none outline-none cursor-pointer"
+              className={
+                "block p-2 bg-sky-50 hover:shadow-lg hover:bg-sky-200 focus:bg-sky-200 border-r border-indigo-400 outline-none cursor-pointer" +
+                (bukaTab === 3 ? " bg-sky-200" : "")
+              }
               onClick={() => setBukaTab(3)}
             >
               Petunjuk Aplikasi
@@ -352,7 +361,7 @@ export default function TabInfoApp() {
           </div>
         </div>
         {/* Footer */}
-        <div className="item-center mt-4 font-semibold">
+        <div className="item-center sm:my-4 my-8 font-semibold sm:mx-0 mx-auto">
           <Link href="/">
             <button
               type="button"

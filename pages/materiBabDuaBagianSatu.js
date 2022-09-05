@@ -52,6 +52,37 @@ export default function materiBabDua() {
                 </button>
               )}
             </div>
+            <div className="absolute bottom-0 ml-28 sm:ml-130 mb-2">
+              <div className="grid grid-cols-6 gap-2 ">
+                <button
+                  onClick={() => setHalaman(1)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabDua == 1 ? " bg-cyan-500" : "")
+                  }
+                >
+                  1
+                </button>
+                <button
+                  onClick={() => setHalaman(2)}
+                  className={
+                    "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all" +
+                    (bukaHalamanBabDua == 2 ? " bg-cyan-500" : "")
+                  }
+                >
+                  2
+                </button>
+                <Link href="/materiBabDuaBagianDua">
+                  <button
+                    className={
+                      "p-2 rounded-lg hover:bg-cyan-500 duration-300 transition-all"
+                    }
+                  >
+                    3
+                  </button>
+                </Link>
+              </div>
+            </div>
             <div className="absolute bottom-0 right-0 mr-8 mb-2">
               {bukaHalamanBabDua >= 2 ? (
                 <Link href="/materiBabDuaBagianDua">
