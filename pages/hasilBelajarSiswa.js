@@ -69,7 +69,7 @@ export default function hasilBelajarSiswa() {
 
   return (
     <DashboardHalamanGuru>
-      <div className="bg-white flex justify-center items-center p-7 m-2 border-2  border-trueGray-400 shadow-lg rounded h-kontenguru">
+      <div className="bg-white flex justify-center items-center p-7 m-2 border-2  border-trueGray-400 shadow-lg rounded sm:h-kontenguru h-screen">
         <div className="container mx-auto px-4 sm:px-8">
           <div className="flex">
             <div className=" border-2 border-cyan-500 w-max rounded-md shadow-lg mb-2 text-sm">

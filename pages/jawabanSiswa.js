@@ -47,8 +47,8 @@ export default function jawabanSiswa() {
               </select>
             </div>
           </div>
-          <div style={{ overflow: "auto" }}>
-            <table className=" leading-normal" style={{ width: "100%" }}>
+          <div className=" overflow-auto w-120 sm:w-full">
+            <table className=" leading-normal">
               {selectOpsi === "Evaluasi" && selectSekolah === "MA" ? (
                 <thead>
                   <tr>

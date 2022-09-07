@@ -14,7 +14,7 @@ export default function petaKonsep() {
           height={720}
         ></Image>
       </div>
-      <div className="absolute bottom-0 right-0 mr-8 mb-2">
+      <div className="fixed sm:absolute bottom-0 right-0 mr-8 mb-8 sm:mb-2 ">
         <Link href={"/materiBabSatu"}>
           <button className=" bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
             Materi

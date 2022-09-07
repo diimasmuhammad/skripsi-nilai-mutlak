@@ -36,7 +36,7 @@ export default function materiBabDua() {
         </div>
         <div className="">
           <div className="flex text-base">
-            <div className="absolute bottom-0 mb-2 -ml-2">
+            <div className="fixed sm:absolute bottom-0 sm:mb-2 mb-8 -ml-2">
               {bukaHalamanBabDua <= 1 ? (
                 <Link href="/materiBabSatu">
                   <button className="  bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
@@ -52,7 +52,7 @@ export default function materiBabDua() {
                 </button>
               )}
             </div>
-            <div className="absolute bottom-0 ml-28 sm:ml-130 mb-2">
+            <div className="fixed sm:absolute bottom-0 ml-36 sm:ml-130 sm:mb-2 mb-20">
               <div className="grid grid-cols-6 gap-2 ">
                 <button
                   onClick={() => setHalaman(1)}
@@ -83,7 +83,7 @@ export default function materiBabDua() {
                 </Link>
               </div>
             </div>
-            <div className="absolute bottom-0 right-0 mr-8 mb-2">
+            <div className="fixed sm:absolute bottom-0 right-0 mr-8 sm:mb-2 mb-8">
               {bukaHalamanBabDua >= 2 ? (
                 <Link href="/materiBabDuaBagianDua">
                   <button className=" bg-cyan-500 text-white font-semibold shadow-md py-3 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">

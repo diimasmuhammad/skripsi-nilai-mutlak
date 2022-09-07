@@ -35,6 +35,7 @@ module.exports = {
         kontenSmall: "74vh",
       }),
       spacing: {
+        "120": "30rem",
         "128": "32rem",
         "130": "34rem",
         "144": "36rem",
