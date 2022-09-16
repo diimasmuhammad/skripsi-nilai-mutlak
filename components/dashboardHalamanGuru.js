@@ -2,23 +2,44 @@ import React from "react";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
+// import { useRouter } from "next/router";
+// import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
 
 export default function DashboardHalamanGuru(props) {
   const [open, setOpen] = useState(true);
 
-  const [pengguna, setPengguna] = useState("");
+  // const [pengguna, setPengguna] = useState("");
 
-  const router = useRouter();
+  const [halaman, setHalaman] = useState(1);
+  const [halamanMobile, setHalamanMobile] = useState(2);
+
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   const accessToken = userAccessToken();
+  //   if (!accessToken) return router.push("/");
+  //   const [userInfo] = fetchUser();
+
+  //   setPengguna(userInfo);
+  // }, []);
 
   useEffect(() => {
-    const accessToken = userAccessToken();
-    if (!accessToken) return router.push("/");
-    const [userInfo] = fetchUser();
-
-    setPengguna(userInfo);
+    setHalaman(JSON.parse(window.localStorage.getItem("bukaHalamanGuru")));
   }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("bukaHalamanGuru", halaman);
+  }, [halaman]);
+  useEffect(() => {
+    setHalamanMobile(
+      JSON.parse(window.localStorage.getItem("bukaHalamanGuruMobile"))
+    );
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("bukaHalamanGuruMobile", halamanMobile);
+  }, [halamanMobile]);
+
   return (
     // sidebar
     <div className="flex flex-col">
@@ -56,7 +77,15 @@ export default function DashboardHalamanGuru(props) {
           </div>
           <ul className="pt-8 font-semibold text-cyan-500">
             <Link href="/hasilBelajarSiswa">
-              <li className="py-2  text-base flex items-center gap-x-4 cursor-pointer p-2 bg-white hover:text-white hover:ring-2 hover:ring-white hover:bg-cyan-500 rounded-md">
+              <li
+                className={
+                  "py-2  text-base flex items-center gap-x-4 cursor-pointer p-2 bg-white hover:text-white hover:ring-2 hover:ring-white hover:bg-cyan-500 rounded-md" +
+                  (halaman === 1
+                    ? " bg-cyan-500 text-white ring-2 ring-white"
+                    : "")
+                }
+                onClick={() => setHalaman(1)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -76,7 +105,15 @@ export default function DashboardHalamanGuru(props) {
               </li>
             </Link>
             <Link href="/jawabanSiswa">
-              <li className="py-2 mt-2  text-base flex items-center gap-x-4 cursor-pointer p-2 bg-white hover:text-white hover:ring-2 hover:ring-white hover:bg-cyan-500 rounded-md">
+              <li
+                className={
+                  "py-2 mt-2  text-base flex items-center gap-x-4 cursor-pointer p-2 bg-white hover:text-white hover:ring-2 hover:ring-white hover:bg-cyan-500 rounded-md" +
+                  (halaman === 2
+                    ? " bg-cyan-500 text-white ring-2 ring-white"
+                    : "")
+                }
+                onClick={() => setHalaman(2)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -92,6 +129,34 @@ export default function DashboardHalamanGuru(props) {
                   }
                 >
                   Jawaban Siswa
+                </span>
+              </li>
+            </Link>
+            <Link href="/edit">
+              <li
+                className={
+                  "py-2 mt-2  text-base flex items-center gap-x-4 cursor-pointer p-2 bg-white hover:text-white hover:ring-2 hover:ring-white hover:bg-cyan-500 rounded-md" +
+                  (halaman === 3
+                    ? " bg-cyan-500 text-white ring-2 ring-white"
+                    : "")
+                }
+                onClick={() => setHalaman(3)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                >
+                  <path d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"></path>
+                  <path d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"></path>
+                </svg>
+                <span
+                  className={
+                    " origin-left duration-300 " + (!open && "scale-0 hidden")
+                  }
+                >
+                  Edit
                 </span>
               </li>
             </Link>
@@ -133,17 +198,17 @@ export default function DashboardHalamanGuru(props) {
                 ></img>{" "}
               </div>
               <Link href="/" className="text-base tracking-wide">
-                <a className="text-white uppercase">Halaman Guru </a>
+                <a className="text-white uppercase mx-auto">Halaman Guru </a>
               </Link>
 
-              <div className="text-white flex justify-center items-center gap-2">
+              {/* <div className="text-white flex justify-center items-center gap-2">
                 <img
                   className="rounded-full w-12 h-10"
                   src={pengguna?.photoURL}
                   alt=""
                 />
                 <p className="text-sm">{pengguna.displayName}</p>
-              </div>
+              </div> */}
             </div>
             <div>{props.children}</div>
           </div>
@@ -152,8 +217,33 @@ export default function DashboardHalamanGuru(props) {
       <div className="bottom-0  mx-auto text-white block sm:hidden">
         <div className="flex container bg-cyan-500 w-130 p-2 mx-3 justify-between">
           <div>
+            <Link href="/">
+              <button
+                className="hover:bg-white hover:text-cyan-500 p-2 rounded-lg"
+                onClick={() => setHalamanMobile(1)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                >
+                  <path d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z"></path>
+                </svg>
+              </button>
+            </Link>
+          </div>
+          <div>
             <Link href="/hasilBelajarSiswa">
-              <button className="flex items-center gap-2 hover:bg-white hover:text-cyan-500 p-2 rounded-lg">
+              <button
+                className={
+                  "flex items-center gap-2 hover:bg-white hover:text-cyan-500 p-2 rounded-lg" +
+                  (halamanMobile === 2
+                    ? " bg-white text-cyan-500 ring-2 ring-cyan-500"
+                    : "")
+                }
+                onClick={() => setHalamanMobile(2)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -167,23 +257,18 @@ export default function DashboardHalamanGuru(props) {
               </button>
             </Link>
           </div>
-          <div>
-            <Link href="/">
-              <button className="hover:bg-white hover:text-cyan-500 p-2 rounded-lg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                >
-                  <path d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z"></path>
-                </svg>
-              </button>
-            </Link>
-          </div>
+
           <div>
             <Link href="/jawabanSiswa">
-              <button className="flex items-center gap-2 hover:bg-white hover:text-cyan-500 p-2 rounded-lg">
+              <button
+                className={
+                  "flex items-center gap-2 hover:bg-white hover:text-cyan-500 p-2 rounded-lg" +
+                  (halamanMobile === 3
+                    ? " bg-white text-cyan-500 ring-2 ring-cyan-500"
+                    : "")
+                }
+                onClick={() => setHalamanMobile(3)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -194,6 +279,30 @@ export default function DashboardHalamanGuru(props) {
                   <path d="M4 22h11v-2H4V8H2v12c0 1.103.897 2 2 2z"></path>
                 </svg>
                 <span>Jawaban Siswa</span>
+              </button>
+            </Link>
+          </div>
+          <div>
+            <Link href="/edit">
+              <button
+                className={
+                  "flex items-center gap-2 hover:bg-white hover:text-cyan-500 p-2 rounded-lg" +
+                  (halamanMobile === 4
+                    ? " bg-white text-cyan-500 ring-2 ring-cyan-500"
+                    : "")
+                }
+                onClick={() => setHalamanMobile(4)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                >
+                  <path d="M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6.933 12.481-3.274-3.274 1.414-1.414 1.726 1.726 4.299-5.159 1.537 1.281-5.702 6.84z"></path>
+                  <path d="M4 22h11v-2H4V8H2v12c0 1.103.897 2 2 2z"></path>
+                </svg>
+                <span>Edit</span>
               </button>
             </Link>
           </div>

@@ -512,7 +512,7 @@ export default function HalamanEmpat() {
                       <ol className="list-lowerAlpha list-inside pl-0 sm:pl-4">
                         <li>
                           <div className="inline-block">
-                            <div className="flex flex-row items-center">
+                            <div className="flex flex-row items-center sm:ml-10 -ml-6">
                               <InlineMath math="\ |2x+1| = \Biggr\lbrace" />
                               <span className="inline-block">
                                 <div className="flex flex-col">
@@ -580,7 +580,7 @@ export default function HalamanEmpat() {
                         </li>
                       </ol>
 
-                      <ol className=" list-inside pl-0 sm:pl-4 ml-20">
+                      <ol className=" list-inside pl-0 sm:pl-4 sm:ml-20 ml-10">
                         <li>
                           <div className="inline-block">
                             <div className="flex flex-row items-center">

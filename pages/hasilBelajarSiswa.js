@@ -5,67 +5,31 @@ import ListLatihanDua from "../components/guru/listsiswa/listLatihanDua";
 import ListLatihanTiga from "../components/guru/listsiswa/listLatihanTiga";
 import Evaluasi from "../components/guru/listsiswa/listEvaluasi";
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
-import { useEffect } from "react";
-import ReactHTMLTableToExcel from "react-html-table-to-excel";
+// import { useRouter } from "next/router";
+// import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
+// import { useEffect } from "react";
+// import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default function hasilBelajarSiswa() {
-  const [halaman, setHalaman] = useState(1);
+  // const [halaman, setHalaman] = useState(1);
   const [selectOpsi, setSelectOpsi] = useState();
   const [selectSekolah, setSelectSekolah] = useState();
-  const [opsiSatu, setOpsiSatu] = useState(false);
-  const [opsiDua, setOpsiDua] = useState(false);
-  const [opsiTiga, setOpsiTiga] = useState(false);
-  const [opsiEmpat, setOpsiEmpat] = useState(false);
-  const [opsiSekolah, setOpsiSekolah] = useState(false);
-  const [pengguna, setPengguna] = useState({});
+  // const [opsiSatu, setOpsiSatu] = useState(false);
+  // const [opsiDua, setOpsiDua] = useState(false);
+  // const [opsiTiga, setOpsiTiga] = useState(false);
+  // const [opsiEmpat, setOpsiEmpat] = useState(false);
+  // const [opsiSekolah, setOpsiSekolah] = useState(false);
+  // const [pengguna, setPengguna] = useState({});
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    const accessToken = userAccessToken();
-    if (!accessToken) return router.push("/");
-    const [userInfo] = fetchUser();
+  // useEffect(() => {
+  //   const accessToken = userAccessToken();
+  //   if (!accessToken) return router.push("/");
+  //   const [userInfo] = fetchUser();
 
-    setPengguna(userInfo);
-  }, []);
-
-  // const gantiOpsiSatu = (isiOpsiSatu) => {
-  //   if (isiOpsiSatu.target.value === "Latihan Bab Satu") {
-  //     setOpsiSatu(true);
-  //   } else {
-  //     setOpsiSatu(false);
-  //   }
-  // };
-  // const gantiOpsiDua = (isiOpsiDua) => {
-  //   if (isiOpsiDua.target.value === "Latihan Bab Dua") {
-  //     setOpsiDua(true);
-  //   } else {
-  //     setOpsiDua(false);
-  //   }
-  // };
-  // const gantiOpsiTiga = (isiOpsiTiga) => {
-  //   if (isiOpsiTiga.target.value === "Latihan Bab Tiga") {
-  //     setOpsiTiga(true);
-  //   } else {
-  //     setOpsiTiga(false);
-  //   }
-  // };
-  // const gantiOpsiEmpat = (isiOpsiEmpat) => {
-  //   if (isiOpsiEmpat.target.value === "Evaluasi") {
-  //     setOpsiEmpat(true);
-  //   } else {
-  //     setOpsiEmpat(false);
-  //   }
-  // };
-  // const gantiOpsiSekolah = (isiOpsiSekolah) => {
-  //   if (isiOpsiSekolah.target.value === "MA") {
-  //     setOpsiSekolah(true);
-  //   } else {
-  //     setOpsiSekolah(false);
-  //   }
-  // };
+  //   setPengguna(userInfo);
+  // }, []);
 
   return (
     <DashboardHalamanGuru>
@@ -108,31 +72,6 @@ export default function hasilBelajarSiswa() {
               buttonText="Download as XLS"
             /> */}
           </div>
-
-          {/* <button
-              onClick={() => setHalaman(1)}
-              className=" active:bg-cyan-500 block p-2 text-cyan-600 hover:shadow-lg hover:bg-cyan-400 focus:bg-cyan-400 hover:text-white focus:text-white active:text-white border-r border-indigo-400 outline-none cursor-pointer"
-            >
-              Latihan Bab Satu
-            </button>
-            <button
-              onClick={() => setHalaman(2)}
-              className="active:bg-cyan-500 block p-2 text-cyan-600 hover:shadow-lg hover:bg-cyan-400 focus:bg-cyan-400 hover:text-white focus:text-white active:text-white border-r border-indigo-400 outline-none cursor-pointer"
-            >
-              Latihan Bab Dua
-            </button>
-            <button
-              onClick={() => setHalaman(3)}
-              className="active:bg-cyan-500 block p-2 text-cyan-600 hover:shadow-lg hover:bg-cyan-400 focus:bg-cyan-400 hover:text-white focus:text-white active:text-white border-r border-indigo-400 outline-none cursor-pointer"
-            >
-              Latihan Bab Tiga
-            </button>
-            <button
-              onClick={() => setHalaman(4)}
-              className="active:bg-cyan-500 block p-2 text-cyan-600 hover:shadow-lg hover:bg-cyan-400 focus:bg-cyan-400 hover:text-white focus:text-white active:text-white border-r border-indigo-400 outline-none cursor-pointer"
-            >
-              Evaluasi
-            </button> */}
 
           <div className="">
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
@@ -203,15 +142,5 @@ export default function hasilBelajarSiswa() {
         </div>
       </div>
     </DashboardHalamanGuru>
-    // {/* <div>
-    //   <div className="flex text-base">
-    //     <div className=" absolute bottom-0 mb-2 ml-4">
-    //       <button onClick={() => showPrevious(first)}>Sebelumnya</button>{" "}
-    //     </div>
-    //     <div className=" absolute bottom-0 right-0 mr-8 mb-2">
-    //       <button onClick={() => showNext(last)}>Selanjutnya</button>
-    //     </div>
-    //   </div>
-    // </div> */}
   );
 }

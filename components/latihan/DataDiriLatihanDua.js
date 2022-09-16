@@ -1,37 +1,70 @@
 import { Alert, Stack } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { db } from "../../firebase/initFirebase";
+import {
+  collection,
+  endBefore,
+  getDocs,
+  limit,
+  limitToLast,
+  onSnapshot,
+  orderBy,
+  query,
+  startAfter,
+  doc,
+  updateDoc,
+  where,
+} from "firebase/firestore";
 
 const DataDiriLatihanDua = (props) => {
   const [nama, setNama] = useState("");
   const [asalSekolah, setAsalSekolah] = useState(null);
   const [token, setToken] = useState("");
-
+  const [data, setData] = useState([]);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const koleksiToken = collection(db, "token");
+
+    const q = query(koleksiToken, where("id", "==", "2"));
+
+    const ambilData = onSnapshot(q, (querySnapshot) => {
+      setData(
+        querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+          tanggal: doc.data().tanggal?.toDate().getTime(),
+        }))
+      );
+    });
+
+    return ambilData;
+  }, []);
 
   const loginLatihan = (e) => {
     e.preventDefault();
+    data.map((action) => {
+      const tokenLatihan = action.token;
 
-    const tokenLatihan = "latihandua";
-
-    if (nama === "") {
-      setError("Masukkan Data dengan Benar dan Lengkap !");
-    } else if (asalSekolah === null) {
-      setError("Masukkan Data dengan Benar dan Lengkap !");
-    } else {
-      if (token === tokenLatihan) {
-        const pengguna = {
-          namaSiswa: nama,
-          sekolah: asalSekolah,
-        };
-        localStorage.setItem("dataSiswa", JSON.stringify(pengguna));
-        props.signin(pengguna);
+      if (nama === "") {
+        setError("Masukkan Data dengan Benar dan Lengkap !");
+      } else if (asalSekolah === null) {
+        setError("Masukkan Data dengan Benar dan Lengkap !");
       } else {
-        setError("Token Latihan Salah !");
+        if (token === tokenLatihan) {
+          const pengguna = {
+            namaSiswa: nama,
+            sekolah: asalSekolah,
+          };
+          localStorage.setItem("dataSiswa", JSON.stringify(pengguna));
+          props.signin(pengguna);
+        } else {
+          setError("Token Latihan Salah !");
+        }
       }
-    }
+    });
   };
-
   return (
     <>
       <div className="flex flex-col sm:py-16 py-16">

@@ -142,11 +142,16 @@ export default function HalamanSatu() {
           <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 ">
             <figure>
               <div className="flex justify-center items-center w-max m-2 mx-auto border border-black">
-                <Image
+                <img
+                  src="materi/sketsa-ilustrasi-jarak.png"
+                  className="w-80 sm:w-130 h-48 sm:h-80"
+                  alt=""
+                />
+                {/* <Image
                   src="/materi/sketsa-ilustrasi-jarak.png"
                   width={650}
                   height={280}
-                ></Image>
+                ></Image> */}
               </div>
               <figcaption className=" text-xs font-serif italic pb-2 text-center">
                 Gambar 1.1 Sketsa Ilustrasi Rumah
@@ -184,12 +189,17 @@ export default function HalamanSatu() {
             </p>
             <figure>
               <div className="flex justify-center items-center w-max m-2 mx-auto border border-black">
-                <Image
+                <img
+                  src="/materi/sketsa-garis-bilangan.png"
+                  className="w-80 sm:w-130 h-48 sm:h-80"
+                  alt=""
+                />
+                {/* <Image
                   src="/materi/sketsa-garis-bilangan.png"
                   quality={100}
                   width={800}
                   height={450}
-                ></Image>
+                ></Image> */}
               </div>
               <figcaption className=" text-xs font-serif italic pb-2 text-center">
                 Gambar 1.2 Sketsa Pergerakan Garis Bilangan
@@ -417,13 +427,11 @@ export default function HalamanSatu() {
             <p className="text-justify indent-sm">
               Jadi, kita dapat melihat pergerakan akhir rudi dari posisi awal
               adalah 1 langkah saja ke belakang{" "}
-              <InlineMath
-                math="(x = -1 \text{ atau } x = (+2) +
-                (-3) + (+2) + (-1) + (-1) = -1)"
-              />
-              , tetapi konsep nilai mutlak disini adalah berapa banyak langkah
-              yang diambil rudi. Kita hanya menghitung banyak langkah, bukan
-              arahnya, sehingga banyak langkahnya adalah{" "}
+              <InlineMath math="(x = -1 \text{ atau } x = (+2) + (-3) + (+2) + (-1) " />{" "}
+              <InlineMath math=" + (-1) = -1)"></InlineMath>, tetapi konsep
+              nilai mutlak disini adalah berapa banyak langkah yang diambil
+              rudi. Kita hanya menghitung banyak langkah, bukan arahnya,
+              sehingga banyak langkahnya adalah{" "}
               <InlineMath
                 math="|2| + |-3| +
                 |2| + |-1| + |-1| = 9"

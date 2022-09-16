@@ -11,7 +11,15 @@ import {
   collection,
   getDocs,
   addDoc,
+  endBefore,
+  limit,
+  limitToLast,
+  onSnapshot,
+  orderBy,
+  query,
+  startAfter,
   serverTimestamp,
+  where,
 } from "firebase/firestore";
 import DataDiriLatihanTiga from "../components/latihan/DataDiriLatihanTiga";
 import { useTimer } from "react-timer-hook";
@@ -109,6 +117,26 @@ export default function latihanBabTiga(props) {
     }
   };
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const koleksiKkm = collection(db, "kkmcoba");
+
+    const q = query(koleksiKkm, where("id", "==", "3"));
+
+    const ambilData = onSnapshot(q, (querySnapshot) => {
+      setData(
+        querySnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+          tanggal: doc.data().tanggal?.toDate().getTime(),
+        }))
+      );
+    });
+
+    return ambilData;
+  }, []);
+
   return (
     <DashboardPetunjuk>
       {dataSiswa !== null ? (
@@ -121,9 +149,18 @@ export default function latihanBabTiga(props) {
 
               <div className="border border-indigo-400 shadow-xl flex flex-col items-center mx-auto w-max p-4 mt-4">
                 <p className="text-center">Skor Latihan Anda :</p>
-                <p className="mt-2 font-bold text-lg">{dataSiswa.namaSiswa}</p>
-                <p className="my-2 font-bold text-lg">{dataSiswa.sekolah}</p>
-                <p className="my-2 font-bold text-lg">{skor.benar * 10}</p>
+                <p className="mt-2 font-bold text-lg">
+                  Nama : {dataSiswa.namaSiswa}
+                </p>
+                <p className="my-2 font-bold text-lg">
+                  Sekolah : {dataSiswa.sekolah}
+                </p>
+                <p className="my-2 font-bold text-lg">
+                  Nilai : {skor.benar * 10}
+                </p>
+                {/* {data.map((action) => (
+                  <p className="my-2 font-bold text-lg">KKM : {action.kkm}</p>
+                ))} */}
               </div>
               <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
                 <Link href="/evaluasi">

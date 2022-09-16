@@ -28,7 +28,7 @@ export default function Header() {
             </a>
           </Link>
 
-          <button
+          {/* <button
             onClick={logIn}
             className="flex flex-col sm:flex-row justify-center w-20 sm:w-40 h-20 sm:h-12 items-center rounded-md sm:ml-80 px-2  bg-white hover:bg-cyan-400 hover:ring hover:ring-white hover:text-white text-cyan-400"
           >
@@ -36,7 +36,7 @@ export default function Header() {
             <span className="ml-2  uppercase tracking-wider font-medium text-xs">
               Halaman Guru
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

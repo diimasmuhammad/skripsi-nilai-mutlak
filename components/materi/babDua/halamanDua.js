@@ -639,7 +639,7 @@ export default function HalamanDua() {
                 <li>
                   <div className="flex flex-row gap-20">
                     <div>
-                      <InlineMath math="2x - 15 \hspace{0.18cm}" />
+                      <InlineMath math="2x - 15 \hspace{0.03cm}" />
                     </div>
                     <div className="font-bold">=</div>
                     <div>

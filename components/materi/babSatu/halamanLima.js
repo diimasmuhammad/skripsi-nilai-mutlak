@@ -68,179 +68,164 @@ export default function HalamanLima() {
                       berdasarkan titik bantu yang didapatkan dari definisi
                       nilai mutlak:
                     </li>
-                    <li className="py-4">
-                      <div className="flex justify-center items-center mx-auto">
-                        <table className="border border-black">
-                          <colgroup>
-                            <col style={{ width: "49px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th className="border border-black p-3 text-center "></th>
-                              <th
-                                className="border border-black p-3 text-center "
-                                colSpan="6"
-                              >
-                                Untuk <InlineMath>x \lt 0</InlineMath>
-                              </th>
-                              <th
-                                className="border border-black p-3 text-center "
-                                colSpan="7"
-                              >
-                                Untuk <InlineMath>x \ge 0</InlineMath>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr className=" bg-blue-200">
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>x</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                0
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>x=f(x)</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                0
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                            <tr className=" bg-blue-200">
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>(x,y)</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-5,5)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-4,4)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-3,3)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-2,2)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-1,1)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (0,0)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (1,1)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (2,2)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (3,3)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (4,4)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (5,5)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </li>
+                    <div className=" -ml-14 sm:ml-0 sm:w-full w-85 overflow-auto">
+                      <table className="border border-black ">
+                        <thead>
+                          <tr>
+                            <th className="border border-black p-3 text-center "></th>
+                            <th
+                              className="border border-black p-3 text-center "
+                              colSpan="6"
+                            >
+                              Untuk <InlineMath>x \lt 0</InlineMath>
+                            </th>
+                            <th
+                              className="border border-black p-3 text-center "
+                              colSpan="7"
+                            >
+                              Untuk <InlineMath>x \ge 0</InlineMath>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className=" bg-blue-200">
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>x</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              0
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>x=f(x)</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              0
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                          <tr className=" bg-blue-200">
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>(x,y)</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-5,5)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-4,4)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-3,3)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-2,2)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-1,1)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (0,0)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (1,1)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (2,2)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (3,3)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (4,4)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (5,5)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    {/* <li className="py-4">
+                      
+                    </li> */}
                     <li>
                       <a className="font-bold">Langkah 3</a>, Menyajikan
                       titik-titik yang diperoleh pada tabel ke dalam koordinat
@@ -248,13 +233,18 @@ export default function HalamanLima() {
                     </li>
                     <li>
                       <figure>
-                        <div className="flex justify-center items-center w-max m-2 mx-auto border border-black">
-                          <Image
+                        <div className="flex justify-center items-center w-max m-2 mx-auto sm:ml-0 -ml-14 border border-black">
+                          <img
+                            src="/contoh-soal/contoh-soal-grafik-satu.png"
+                            className="w-85 sm:w-180 h-56 sm:h-100"
+                            alt=""
+                          />
+                          {/* <Image
                             src="/contoh-soal/contoh-soal-grafik-satu.png"
                             quality={100}
                             width={800}
                             height={515}
-                          ></Image>
+                          ></Image> */}
                         </div>
                         <figcaption className=" text-xs font-serif italic pb-2 text-center">
                           Gambar 1.3 Grafik Fungsi{" "}
@@ -281,9 +271,9 @@ export default function HalamanLima() {
                       <a className="font-bold">Langkah 1</a>, Menentukan
                       definisi dari fungsi nilai mutlak:
                     </li>
-                    <li className="pt-2">
-                      Jadi,{" "}
-                      <InlineMath math="\ |x-2| = \begin{cases}x-2, \hspace{0.55cm} untuk \hspace{0.1cm} x \ge 2 \\ -(x-2)=-x+2, \hspace{0.55cm} untuk \hspace{0.1cm} x \lt 2  \\  \end{cases}" />
+                    <li className="pt-2 -ml-10 sm:ml-0">
+                      Jadi,
+                      <InlineMath math="\ |x-2| = \begin{cases}x-2, \hspace{0.55cm} untuk \hspace{0.1cm} x \ge 2 \\ -(x-2)=-x+2, \hspace{0.05cm} untuk \hspace{0.1cm} x \lt 2  \\  \end{cases}" />
                     </li>
                     <li className="pt-2">
                       Maka didapatkan <InlineMath>x \ge 2</InlineMath> dan{" "}
@@ -294,179 +284,177 @@ export default function HalamanLima() {
                       berdasarkan titik bantu yang didapatkan dari definisi
                       nilai mutlak:
                     </li>
-                    <li className="py-4">
-                      <div className="flex justify-center items-center mx-auto">
-                        <table className="border border-black">
-                          <colgroup>
-                            <col style={{ width: "49px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "26px" }} />
-                            <col style={{ width: "25px" }} />
-                          </colgroup>
-                          <thead>
-                            <tr>
-                              <th className="border border-black p-3 text-center "></th>
-                              <th
-                                className="border border-black p-3 text-center "
-                                colSpan="6"
-                              >
-                                Untuk <InlineMath>x \lt 2</InlineMath>
-                              </th>
-                              <th
-                                className="border border-black p-3 text-center "
-                                colSpan="7"
-                              >
-                                Untuk <InlineMath>x \ge 2</InlineMath>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr className=" bg-blue-200">
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>x</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                -1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                0
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                6
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                7
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                            <tr>
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>x=f(x)</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                0
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                1
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                2
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                3
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                4
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                5
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                            <tr className=" bg-blue-200">
-                              <td className="border border-black p-3 text-center ">
-                                <InlineMath>(x,y)</InlineMath>
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-3,5)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-2,4)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (-1,3)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (0,2)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (1,1)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (2,0)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (3,1)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (4,2)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (5,3)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (6,4)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                (7,5)
-                              </td>
-                              <td className="border border-black p-3 text-center ">
-                                ...
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </li>
+                    <div className=" -ml-14 sm:ml-0 sm:w-full w-85 overflow-auto">
+                      <table className="border border-black">
+                        <colgroup>
+                          <col style={{ width: "49px" }} />
+                          <col style={{ width: "25px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "25px" }} />
+                          <col style={{ width: "25px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "25px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "26px" }} />
+                          <col style={{ width: "25px" }} />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th className="border border-black p-3 text-center "></th>
+                            <th
+                              className="border border-black p-3 text-center "
+                              colSpan="6"
+                            >
+                              Untuk <InlineMath>x \lt 2</InlineMath>
+                            </th>
+                            <th
+                              className="border border-black p-3 text-center "
+                              colSpan="7"
+                            >
+                              Untuk <InlineMath>x \ge 2</InlineMath>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className=" bg-blue-200">
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>x</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              -1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              0
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              6
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              7
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>x=f(x)</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              0
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              1
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              2
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              3
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              4
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              5
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                          <tr className=" bg-blue-200">
+                            <td className="border border-black p-3 text-center ">
+                              <InlineMath>(x,y)</InlineMath>
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-3,5)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-2,4)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (-1,3)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (0,2)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (1,1)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (2,0)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (3,1)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (4,2)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (5,3)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (6,4)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              (7,5)
+                            </td>
+                            <td className="border border-black p-3 text-center ">
+                              ...
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <li>
                       <a className="font-bold">Langkah 3</a>, Menyajikan
                       titik-titik yang diperoleh pada tabel ke dalam koordinat
@@ -474,13 +462,18 @@ export default function HalamanLima() {
                     </li>
                     <li>
                       <figure>
-                        <div className="flex justify-center items-center w-max m-2 mx-auto border border-black">
-                          <Image
+                        <div className="flex justify-center items-center w-max m-2 mx-auto -ml-14 sm:ml-0 border border-black">
+                          <img
+                            src="/contoh-soal/contoh-soal-grafik-dua.png"
+                            className="w-85 sm:w-180 h-56 sm:h-100"
+                            alt=""
+                          />
+                          {/* <Image
                             src="/contoh-soal/contoh-soal-grafik-dua.png"
                             quality={100}
                             width={800}
                             height={491}
-                          ></Image>
+                          ></Image> */}
                         </div>
                         <figcaption className=" text-xs font-serif italic pb-2 text-center">
                           Gambar 1.4 Grafik Fungsi{" "}

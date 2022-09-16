@@ -35,11 +35,14 @@ module.exports = {
         kontenSmall: "74vh",
       }),
       spacing: {
+        "85": "21rem",
+        "100": "28rem",
         "120": "30rem",
         "128": "32rem",
         "130": "34rem",
         "144": "36rem",
         "166": "38rem",
+        "180": "50rem",
       },
       width: (theme) => ({
         latihansm: "100vh",
