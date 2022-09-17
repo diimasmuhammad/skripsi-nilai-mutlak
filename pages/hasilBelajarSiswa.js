@@ -94,6 +94,9 @@ export default function hasilBelajarSiswa() {
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
                         Jam
                       </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Aksi
+                      </th>
                     </tr>
                   </thead>
 

@@ -10,6 +10,8 @@ import {
   orderBy,
   query,
   startAfter,
+  deleteDoc,
+  doc,
 } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import moment from "moment";
@@ -33,6 +35,18 @@ export default function ListLatihanSatu() {
 
     return ambilData;
   }, []);
+
+  const deleteData = (id) => {
+    let fieldEdit = doc(db, "latihansatu", id);
+
+    deleteDoc(fieldEdit)
+      .then(() => {
+        alert("Data Berhasil Dihapus");
+      })
+      .catch((err) => {
+        alert("Tidak Bisa Menghapus Data..");
+      });
+  };
 
   if (data.length === 0) {
     return (
@@ -71,6 +85,14 @@ export default function ListLatihanSatu() {
             <p className="text-cyan-600 whitespace-no-wrap text-center">
               {moment(datas.tanggal).format("h:mm:ss a")}
             </p>
+          </td>
+          <td className="px-5 py-5 border border-cyan-400 bg-white text-sm">
+            <button
+              onClick={() => deleteData(datas.id)}
+              className=" bg-red-500 py-2 px-4 rounded-lg text-white hover:text-red-500 hover:ring hover:ring-red-500 hover:bg-white"
+            >
+              Hapus
+            </button>
           </td>
         </tr>
       ))}
