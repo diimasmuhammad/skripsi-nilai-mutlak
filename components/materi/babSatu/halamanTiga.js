@@ -49,7 +49,7 @@ export default function HalamanTiga() {
                 <InlineMath>|x|\ge0</InlineMath>
               </li>
               <li className="pt-5">
-                <InlineMath>|x|=-x</InlineMath>
+                <InlineMath>|x|=|-x|</InlineMath>
               </li>
               <li className="pt-5">
                 <InlineMath>|x-y|=|y-x|</InlineMath>

@@ -1,5 +1,7 @@
 import DashboardPetunjuk from "../components/dashboardPetunjuk";
 import PetunjukLatihan from "../components/latihan/petunjukLatihan";
+import { Alert, Stack } from "@mui/material";
+
 import "katex/dist/katex.min.css";
 import { soal as dataSoal } from "../components/data/latihanTiga/dataSoal";
 import { BlockMath, InlineMath } from "react-katex";
@@ -158,17 +160,46 @@ export default function latihanBabTiga(props) {
                 <p className="my-2 font-bold text-lg">
                   Nilai : {skor.benar * 10}
                 </p>
-                {/* {data.map((action) => (
-                  <p className="my-2 font-bold text-lg">KKM : {action.kkm}</p>
-                ))} */}
+                {data.map((action) => (
+                  <>
+                    <p className="my-2 font-bold text-lg">KKM : {action.kkm}</p>
+                    {skor.benar * 10 < action.kkm ? (
+                      <Stack sx={{ width: "100%" }} spacing={2}>
+                        <Alert severity="error">
+                          Nilai Anda Belum Memenuhi KKM, Silahkan Ulangi Materi
+                        </Alert>
+                      </Stack>
+                    ) : (
+                      <Stack sx={{ width: "100%" }} spacing={2}>
+                        <Alert severity="success">
+                          Nilai Anda Memenuhi KKM, Silahkan ke Evaluasi
+                        </Alert>
+                      </Stack>
+                    )}
+                  </>
+                ))}
               </div>
-              <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
-                <Link href="/evaluasi">
-                  <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
-                    Evaluasi
-                  </button>
-                </Link>
-              </div>
+              {data.map((action) => (
+                <>
+                  {skor.benar * 10 < action.kkm ? (
+                    <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
+                      <Link href="/materiBabTiga">
+                        <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
+                          Ulangi Materi
+                        </button>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
+                      <Link href="/evaluasi">
+                        <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
+                          Evaluasi
+                        </button>
+                      </Link>
+                    </div>
+                  )}
+                </>
+              ))}
             </div>
           ) : (
             <>

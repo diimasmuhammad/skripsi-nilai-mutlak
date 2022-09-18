@@ -395,7 +395,7 @@ export default function HalamanEmpat() {
                   </ul>
                 </li>
                 <li className="pt-4">
-                  <InlineMath math="|4-3|" />
+                  <InlineMath math="|4-5|" />
                   <ul className="pl-4 ">
                     <li>
                       <a className="font-bold"> Penyelesaian: </a>
@@ -404,7 +404,7 @@ export default function HalamanEmpat() {
                         start={2}
                       >
                         <li className="pt-4">
-                          <InlineMath math="|4-3| = |4|-|3| = 4+3 = 7" />
+                          <InlineMath math="|4-5| = |-1|=1" />
                         </li>
                       </ol>
                     </li>
@@ -453,7 +453,7 @@ export default function HalamanEmpat() {
         <div className="p-3 mt-2 text-sm border-2 border-trueGray-300 text-justify ">
           <p>
             Setelah memahami kajian teori dan contoh soal dari konsep nilai
-            mutlak diatas, mari kerjakan beberapa soal berikut.
+            mutlak di atas, mari kerjakan beberapa soal berikut.
           </p>
           <div>
             <button

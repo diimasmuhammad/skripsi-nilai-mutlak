@@ -119,7 +119,8 @@ const DataDiriLatihanDua = (props) => {
                         </option>
                         {/* <option value={asalSekolah}>SMA</option> */}
                         {/* <option value={asalSekolah}>SMK</option> */}
-                        <option value={asalSekolah}>MA</option>
+                        <option value={asalSekolah}>MAN 3 Banjarmasin</option>
+
                         {/* <option value={asalSekolah}>MAK</option> */}
                       </select>
                     </div>

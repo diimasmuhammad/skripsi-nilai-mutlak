@@ -351,7 +351,12 @@ export default function HalamanDua() {
         <ul className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 gap-1 border-t-2 mt-2 border-trueGray-300">
           <li className="flex-auto text-center">
             <button
-              className=" rounded-lg bg-indigo-300 text-white hover:text-indigo-300 focus:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-r-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100 focus:bg-gray-100 focus:border-indigo-300 cursor-pointer "
+              className={
+                " rounded-lg bg-indigo-300 text-white hover:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-r-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100  cursor-pointer " +
+                (bukaTab === 1
+                  ? " text-indigo-300  bg-gray-100 border-indigo-300"
+                  : "")
+              }
               onClick={() => setBukaTab(1)}
             >
               Cara 1 (Klik Saya)
@@ -360,8 +365,12 @@ export default function HalamanDua() {
 
           <li className=" flex-auto text-center">
             <button
-              className=" rounded-lg
-              bg-indigo-300 text-white hover:text-indigo-300 focus:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-l-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100 focus:bg-gray-100 focus:border-indigo-300 cursor-pointer "
+              className={
+                " rounded-lg bg-indigo-300 text-white hover:text-indigo-300 w-full block font-medium text-base leading-tight uppercase border-x-0 border-t-0 border-b-2 border-r-2 border-transparent px-6 py-2 my-2 hover:border-indigo-300 hover:bg-gray-100  cursor-pointer " +
+                (bukaTab === 2
+                  ? " text-indigo-300  bg-gray-100 border-indigo-300"
+                  : "")
+              }
               onClick={() => setBukaTab(2)}
             >
               Cara 2 (Klik Saya)

@@ -1,5 +1,7 @@
 import DashboardPetunjuk from "../components/dashboardPetunjuk";
 import PetunjukLatihan from "../components/latihan/petunjukLatihan";
+import { Alert, Stack } from "@mui/material";
+
 import "katex/dist/katex.min.css";
 import { soal as dataSoal } from "../components/data/evaluasi/dataSoal";
 import { BlockMath, InlineMath } from "react-katex";
@@ -109,7 +111,7 @@ export default function evaluasi(props) {
       addDoc(koleksiUser, {
         nama: dataSiswa.namaSiswa,
         sekolah: dataSiswa.sekolah,
-        skor: soalBenar.length * 10,
+        skor: soalBenar.length * 4,
         jawaban: jawabanCek,
         tanggal: serverTimestamp(),
       });
@@ -152,19 +154,48 @@ export default function evaluasi(props) {
                   Sekolah : {dataSiswa.sekolah}
                 </p>
                 <p className="my-2 font-bold text-lg">
-                  Nilai : {skor.benar * 5}
+                  Nilai : {skor.benar * 4}
                 </p>
-                {/* {data.map((action) => (
-                  <p className="my-2 font-bold text-lg">KKM : {action.kkm}</p>
-                ))} */}
+                {data.map((action) => (
+                  <>
+                    <p className="my-2 font-bold text-lg">KKM : {action.kkm}</p>
+                    {skor.benar * 4 < action.kkm ? (
+                      <Stack sx={{ width: "100%" }} spacing={2}>
+                        <Alert severity="error">
+                          Nilai Anda Belum Memenuhi KKM, Silahkan Ulangi Materi
+                        </Alert>
+                      </Stack>
+                    ) : (
+                      <Stack sx={{ width: "100%" }} spacing={2}>
+                        <Alert severity="success">
+                          Nilai Anda Memenuhi KKM
+                        </Alert>
+                      </Stack>
+                    )}
+                  </>
+                ))}
               </div>
-              <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
-                <Link href="/">
-                  <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
-                    Materi Selanjutnya
-                  </button>
-                </Link>
-              </div>
+              {data.map((action) => (
+                <>
+                  {skor.benar * 4 < action.kkm ? (
+                    <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
+                      <Link href="/materiBabSatu">
+                        <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
+                          Ulangi Materi
+                        </button>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="absolute bottom-0 right-0 mr-8 mb-1 sm:mb-2 text-base">
+                      <Link href="/">
+                        <button className=" bg-cyan-500 text-white font-semibold shadow-md py-1 sm:py-2 px-6 rounded-md hover:bg-white hover:text-cyan-500 hover:ring-2 hover:ring-cyan-500">
+                          Halaman Utama
+                        </button>
+                      </Link>
+                    </div>
+                  )}
+                </>
+              ))}
             </div>
           ) : (
             <>
