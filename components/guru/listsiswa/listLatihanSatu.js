@@ -57,8 +57,15 @@ export default function ListLatihanSatu() {
   }
   return (
     <>
-      {data.map((datas) => (
+      {data.map((datas, index) => (
         <tr id="trow" key={datas.key}>
+          <td className="px-5 py-5 border border-cyan-400 bg-white text-sm ">
+            <div className="flex items-center">
+              <div className="ml-3">
+                <p className="text-cyan-600 whitespace-no-wrap">{index + 1}</p>
+              </div>
+            </div>
+          </td>
           <td className="px-5 py-5 border border-cyan-400 bg-white text-sm w-2/5">
             <div className="flex items-center">
               <div className="ml-3">

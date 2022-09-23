@@ -60,7 +60,7 @@ export default function hasilBelajarSiswa() {
                 <option value="Pilih Sekolah" selected>
                   Pilih Sekolah
                 </option>
-                <option value="MA">MA</option>
+                <option value="MAN 3 Banjarmasin">MAN 3 Banjarmasin</option>
               </select>
             </div>
             {/* <ReactHTMLTableToExcel
@@ -75,10 +75,13 @@ export default function hasilBelajarSiswa() {
 
           <div className="">
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
-              <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+              <div className="inline-block min-w-full shadow rounded-lg overflow-auto h-120">
                 <table className="min-w-full leading-normal" id="print-tabel">
                   <thead>
                     <tr>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        No
+                      </th>
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
                         Nama
                       </th>
@@ -103,8 +106,8 @@ export default function hasilBelajarSiswa() {
                   <tbody
                     className={
                       selectOpsi === "Latihan Bab Satu" &&
-                      selectSekolah === "MA"
-                        ? ""
+                      selectSekolah === "MAN 3 Banjarmasin"
+                        ? " "
                         : "hidden"
                     }
                   >
@@ -112,7 +115,8 @@ export default function hasilBelajarSiswa() {
                   </tbody>
                   <tbody
                     className={
-                      selectOpsi === "Latihan Bab Dua" && selectSekolah === "MA"
+                      selectOpsi === "Latihan Bab Dua" &&
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }
@@ -122,7 +126,7 @@ export default function hasilBelajarSiswa() {
                   <tbody
                     className={
                       selectOpsi === "Latihan Bab Tiga" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }
@@ -131,7 +135,8 @@ export default function hasilBelajarSiswa() {
                   </tbody>
                   <tbody
                     className={
-                      selectOpsi === "Evaluasi" && selectSekolah === "MA"
+                      selectOpsi === "Evaluasi" &&
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }

@@ -43,15 +43,22 @@ export default function jawabanSiswa() {
                 <option value="Pilih Sekolah" selected>
                   Pilih Sekolah
                 </option>
-                <option value="MA">MA</option>
+                <option value="MAN 3 Banjarmasin">MAN 3 Banjarmasin</option>
               </select>
             </div>
           </div>
-          <div className=" overflow-auto w-120 sm:w-full">
+          <div className=" overflow-auto w-120 sm:w-full h-120">
             <table className=" leading-normal">
-              {selectOpsi === "Evaluasi" && selectSekolah === "MA" ? (
+              {selectOpsi === "Evaluasi" &&
+              selectSekolah === "MAN 3 Banjarmasin" ? (
                 <thead>
                   <tr>
+                    <th
+                      rowSpan={4}
+                      className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider"
+                    >
+                      No
+                    </th>
                     <th
                       rowSpan={4}
                       className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider"
@@ -162,6 +169,12 @@ export default function jawabanSiswa() {
                       rowSpan={4}
                       className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider"
                     >
+                      No
+                    </th>
+                    <th
+                      rowSpan={4}
+                      className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider"
+                    >
                       Nama
                     </th>
                     <th
@@ -214,7 +227,7 @@ export default function jawabanSiswa() {
                   <tr
                     className={
                       selectOpsi === "Latihan Bab Satu" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }
@@ -223,7 +236,8 @@ export default function jawabanSiswa() {
                   </tr>
                   <tr
                     className={
-                      selectOpsi === "Latihan Bab Dua" && selectSekolah === "MA"
+                      selectOpsi === "Latihan Bab Dua" &&
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }
@@ -233,7 +247,7 @@ export default function jawabanSiswa() {
                   <tr
                     className={
                       selectOpsi === "Latihan Bab Tiga" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden"
                     }
@@ -243,7 +257,8 @@ export default function jawabanSiswa() {
                 </thead>
               )}
 
-              {selectOpsi === "Evaluasi" && selectSekolah === "MA" ? (
+              {selectOpsi === "Evaluasi" &&
+              selectSekolah === "MAN 3 Banjarmasin" ? (
                 <tbody className="text-base text-center border border-cyan-400 ">
                   <HasilJawabanEvaluasi></HasilJawabanEvaluasi>
                 </tbody>
@@ -253,7 +268,7 @@ export default function jawabanSiswa() {
                     className={
                       "text-base text-center border border-cyan-400 " +
                       (selectOpsi === "Latihan Bab Satu" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden")
                     }
@@ -264,7 +279,7 @@ export default function jawabanSiswa() {
                     className={
                       "text-base text-center border border-cyan-400 " +
                       (selectOpsi === "Latihan Bab Dua" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden")
                     }
@@ -275,7 +290,7 @@ export default function jawabanSiswa() {
                     className={
                       "text-base text-center border border-cyan-400 " +
                       (selectOpsi === "Latihan Bab Tiga" &&
-                      selectSekolah === "MA"
+                      selectSekolah === "MAN 3 Banjarmasin"
                         ? ""
                         : "hidden")
                     }
