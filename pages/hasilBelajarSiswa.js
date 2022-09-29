@@ -75,8 +75,8 @@ export default function hasilBelajarSiswa() {
 
           <div className="">
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
-              <div className="inline-block min-w-full shadow rounded-lg overflow-auto h-120">
-                <table className="min-w-full leading-normal" id="print-tabel">
+              <div className="inline-block min-w-full shadow rounded-lg overflow-auto h-120 w-120 sm:w-full">
+                <table className="min-w-full leading-normal " id="print-tabel">
                   <thead>
                     <tr>
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">

@@ -441,7 +441,7 @@ export default function HalamanDua() {
                 <InlineMath>3x+2 \lt -4 </InlineMath>{" "}
                 <span className="ml-8">atau</span>
                 <span className="ml-9">
-                  <InlineMath>3x=2 \gt 4</InlineMath>
+                  <InlineMath>3x+2 \gt 4</InlineMath>
                 </span>
               </p>
               <p className="text-justify">

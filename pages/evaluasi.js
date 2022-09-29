@@ -1,5 +1,5 @@
 import DashboardPetunjuk from "../components/dashboardPetunjuk";
-import PetunjukLatihan from "../components/latihan/petunjukLatihan";
+import PetunjukEvaluasi from "../components/latihan/petunjukEvaluasi";
 import { Alert, Stack } from "@mui/material";
 
 import "katex/dist/katex.min.css";
@@ -324,7 +324,7 @@ export default function evaluasi(props) {
 
           <div className="flex flex-col sm:flex-row">
             <div className="mx-5 sm:mx-10">
-              <PetunjukLatihan />
+              <PetunjukEvaluasi />
             </div>
             <div className="mx-5 sm:mx-10">
               <DataDiriEvaluasi

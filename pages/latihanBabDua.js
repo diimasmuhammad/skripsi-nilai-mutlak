@@ -41,12 +41,12 @@ export default function latihanBabDua(props) {
 
   const koleksiUser = collection(db, "latihandua");
 
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 1220);
-  const { seconds, minutes, hours } = useTimer({
-    expiryTimestamp: time,
-    onExpire: () => cekHasil(),
-  });
+  // const time = new Date();
+  // time.setSeconds(time.getSeconds() + 1220);
+  // const { seconds, minutes, hours } = useTimer({
+  //   expiryTimestamp: time,
+  //   onExpire: () => cekHasil(),
+  // });
 
   const userState = () => {
     const data = localStorage.getItem("pengguna");
@@ -207,11 +207,11 @@ export default function latihanBabDua(props) {
                 <div className="flex flex-col sm:flex-row md:flex-row justify-center items-center">
                   <div className="flex flex-col w-full sm:w-max border border-indigo-500 m-3 p-4 sm:my-20">
                     {/* Timer */}
-                    <div className="flex justify-center items-center p-4 border-b border-indigo-500 font-bold">
+                    {/* <div className="flex justify-center items-center p-4 border-b border-indigo-500 font-bold">
                       <p>
                         <span>{minutes}</span>:<span>{seconds}</span>
                       </p>
-                    </div>
+                    </div> */}
                     {/* navigasi soal */}
                     <div className="flex flex-col sm:flex-row">
                       <div className="grid grid-cols-4 gap-6 p-8 border-b sm:border-r border-indigo-500">

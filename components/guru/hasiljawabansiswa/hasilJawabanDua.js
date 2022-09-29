@@ -43,7 +43,12 @@ export default function HasilJawabanDua() {
     <>
       {data.map((action, index) => (
         <tr>
-          <td>{action.nama}</td>
+          <td className="px-5 py-5 border border-cyan-400 bg-white text-sm ">
+            <div className="">{index + 1}</div>
+          </td>
+          <td className="px-5 py-5 border border-cyan-400 bg-white text-sm ">
+            <div className="">{action.nama}</div>
+          </td>
           {action.jawaban.map((item, index) => (
             <td
               className="border-2 border-white"

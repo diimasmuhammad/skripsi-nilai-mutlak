@@ -56,7 +56,7 @@ export default function ListLatihanDua() {
   }
   return (
     <>
-      {data.map((datas) => (
+      {data.map((datas, index) => (
         <tr id="trow" key={datas.key}>
           <td className="px-5 py-5 border border-cyan-400 bg-white text-sm ">
             <div className="flex items-center">
