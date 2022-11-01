@@ -40,12 +40,12 @@ export default function evaluasi(props) {
 
   const koleksiUser = collection(db, "evaluasi");
 
-  // const time = new Date();
-  // time.setSeconds(time.getSeconds() + 3620);
-  // const { seconds, minutes, hours } = useTimer({
-  //   expiryTimestamp: time,
-  //   onExpire: () => cekHasil(),
-  // });
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 3620);
+  const { seconds, minutes, hours } = useTimer({
+    expiryTimestamp: time,
+    onExpire: () => cekHasil(),
+  });
 
   const userState = () => {
     const data = localStorage.getItem("pengguna");
@@ -203,12 +203,12 @@ export default function evaluasi(props) {
                 <div className="flex flex-col sm:flex-row md:flex-row justify-centr items-center">
                   <div className="flex flex-col w-full sm:w-max border border-indigo-500 m-3 p-4 sm:my-10">
                     {/* Timer */}
-                    {/* <div className="flex justify-center items-center p-4 border-b border-indigo-500 font-bold">
+                    <div className="flex justify-center items-center p-4 border-b border-indigo-500 font-bold">
                       <p>
                         <span>{hours}</span>:<span>{minutes}</span>:
                         <span>{seconds}</span>
                       </p>
-                    </div> */}
+                    </div>
                     {/* navigasi soal */}
                     <div className="flex flex-col sm:flex-row">
                       <div className="grid grid-cols-5 sm:grid-cols-8 gap-4 sm:gap-12 p-4 sm:mr-6 border-b border-indigo-500">
