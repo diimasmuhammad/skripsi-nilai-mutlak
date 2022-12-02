@@ -143,7 +143,7 @@ export default function evaluasi(props) {
           {hasil ? (
             <div className="flex flex-col">
               <a className="mt-1 text-white bg-indigo-300 w-max p-2 flex rounded-lg items-center font-bold mx-auto">
-                Hasil Latihan
+                Hasil Evaluasi
               </a>
 
               <div className="border border-indigo-400 shadow-xl flex flex-col items-center mx-auto w-max p-4 mt-4">

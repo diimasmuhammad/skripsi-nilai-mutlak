@@ -15,6 +15,7 @@ import {
 } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import moment from "moment";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default function ListLatihanSatu() {
   const [data, setData] = useState([]);

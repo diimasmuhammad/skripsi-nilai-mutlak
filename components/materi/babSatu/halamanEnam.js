@@ -1094,7 +1094,9 @@ export default function HalamanEnam() {
                                 <div className="flex flex-col">
                                   <div>
                                     <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
+                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2
+                                       text-gray-700 leading-tight focus:outline-none
+                                        focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(1)"
                                       style={style1A}
                                       autoComplete="off"
@@ -1104,7 +1106,9 @@ export default function HalamanEnam() {
                                     />
                                     untuk ,
                                     <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
+                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2
+                                       text-gray-700 leading-tight focus:outline-none
+                                        focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(2)"
                                       style={style1B}
                                       autoComplete="off"
@@ -1114,7 +1118,9 @@ export default function HalamanEnam() {
                                     />
                                     <InlineMath>\ge</InlineMath>
                                     <input
-                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-200"
+                                      className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-16 m-2 p-2
+                                       text-gray-700 leading-tight focus:outline-none
+                                        focus:bg-white focus:border-indigo-200"
                                       id="jawaban1.a(3)"
                                       autoComplete="off"
                                       style={style1C}

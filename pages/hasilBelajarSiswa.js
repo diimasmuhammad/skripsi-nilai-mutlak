@@ -8,12 +8,12 @@ import { useState } from "react";
 // import { useRouter } from "next/router";
 // import { userAccessToken, fetchUser } from "../components/utils/fetchDataUser";
 // import { useEffect } from "react";
-// import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default function hasilBelajarSiswa() {
   // const [halaman, setHalaman] = useState(1);
-  const [selectOpsi, setSelectOpsi] = useState();
-  const [selectSekolah, setSelectSekolah] = useState();
+  const [selectOpsi, setSelectOpsi] = useState("Pilih Laporan");
+  const [selectSekolah, setSelectSekolah] = useState("Pilih Sekolah");
   // const [opsiSatu, setOpsiSatu] = useState(false);
   // const [opsiDua, setOpsiDua] = useState(false);
   // const [opsiTiga, setOpsiTiga] = useState(false);
@@ -63,20 +63,135 @@ export default function hasilBelajarSiswa() {
                 <option value="MAN 3 Banjarmasin">MAN 3 Banjarmasin</option>
               </select>
             </div>
-            {/* <ReactHTMLTableToExcel
-              id="test-table-xls-button"
-              className="download-table-xls-button"
-              table="print-tabel"
-              filename="tablexls"
-              sheet="tablexls"
-              buttonText="Download as XLS"
-            /> */}
+            <div
+              className={
+                (selectOpsi === "Latihan Bab Satu" &&
+                selectSekolah === "MAN 3 Banjarmasin"
+                  ? " "
+                  : "hidden") + " ml-170"
+              }
+            >
+              <ReactHTMLTableToExcel
+                id="test-table-xls-button"
+                className="download-table-xls-button py-2  text-base flex items-center cursor-pointer p-2 bg-green-500 text-white uppercase hover:text-green-500 hover:ring-2 hover:ring-green-500 hover:bg-white rounded-md"
+                table="print-tabel-satu"
+                filename="Data Latihan Satu"
+                sheet="tablexls"
+                buttonText="Unduh"
+              />
+            </div>
+            <div
+              className={
+                (selectOpsi === "Latihan Bab Dua" &&
+                selectSekolah === "MAN 3 Banjarmasin"
+                  ? " "
+                  : "hidden") + " ml-170"
+              }
+            >
+              <ReactHTMLTableToExcel
+                id="test-table-xls-button"
+                className="download-table-xls-button py-2  text-base flex items-center cursor-pointer p-2 bg-green-500 text-white uppercase hover:text-green-500 hover:ring-2 hover:ring-green-500 hover:bg-white rounded-md"
+                table="print-tabel-dua"
+                filename="Data Latihan Dua"
+                sheet="tablexls"
+                buttonText="Unduh"
+              />
+            </div>
+            <div
+              className={
+                (selectOpsi === "Latihan Bab Tiga" &&
+                selectSekolah === "MAN 3 Banjarmasin"
+                  ? " "
+                  : "hidden") + " ml-170"
+              }
+            >
+              <ReactHTMLTableToExcel
+                id="test-table-xls-button"
+                className="download-table-xls-button py-2  text-base flex items-center cursor-pointer p-2 bg-green-500 text-white uppercase hover:text-green-500 hover:ring-2 hover:ring-green-500 hover:bg-white rounded-md"
+                table="print-tabel-tiga"
+                filename="Data Latihan Tiga"
+                sheet="tablexls"
+                buttonText="Unduh"
+              />
+            </div>
+            <div
+              className={
+                (selectOpsi === "Evaluasi" &&
+                selectSekolah === "MAN 3 Banjarmasin"
+                  ? " "
+                  : "hidden") + " ml-170"
+              }
+            >
+              <ReactHTMLTableToExcel
+                id="test-table-xls-button"
+                className="download-table-xls-button py-2  text-base flex items-center cursor-pointer p-2 bg-green-500 text-white uppercase hover:text-green-500 hover:ring-2 hover:ring-green-500 hover:bg-white rounded-md"
+                table="print-tabel-empat"
+                filename="Data Evaluasi"
+                sheet="tablexls"
+                buttonText="Unduh"
+              />
+            </div>
           </div>
 
           <div className="">
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
               <div className="inline-block min-w-full shadow rounded-lg overflow-auto h-120 w-120 sm:w-full">
-                <table className="min-w-full leading-normal " id="print-tabel">
+                <table
+                  className={
+                    (selectOpsi === "Pilih Laporan" &&
+                    selectSekolah === "Pilih Sekolah"
+                      ? " "
+                      : "hidden") + " min-w-full leading-normal "
+                  }
+                  id="print-tabel-satu"
+                >
+                  <thead>
+                    <tr>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        No
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nama
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Sekolah
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nilai
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Hari/Tanggal
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Jam
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Aksi
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody></tbody>
+                </table>
+                <div
+                  className={
+                    (selectOpsi === "Pilih Laporan" &&
+                    selectSekolah === "Pilih Sekolah"
+                      ? " "
+                      : "hidden") + " text-cyan-500"
+                  }
+                >
+                  Silahkan Pilih Laporan dan Sekolah . . .
+                </div>
+                <table
+                  className={
+                    (selectOpsi === "Latihan Bab Satu" &&
+                    selectSekolah === "MAN 3 Banjarmasin"
+                      ? " "
+                      : "hidden") + " min-w-full leading-normal "
+                  }
+                  id="print-tabel-satu"
+                >
                   <thead>
                     <tr>
                       <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
@@ -104,42 +219,148 @@ export default function hasilBelajarSiswa() {
                   </thead>
 
                   <tbody
-                    className={
-                      selectOpsi === "Latihan Bab Satu" &&
-                      selectSekolah === "MAN 3 Banjarmasin"
-                        ? " "
-                        : "hidden"
-                    }
+                  // className={
+                  //   selectOpsi === "Latihan Bab Satu" &&
+                  //   selectSekolah === "MAN 3 Banjarmasin"
+                  //     ? " "
+                  //     : "hidden"
+                  // }
                   >
                     <ListLatihanSatu></ListLatihanSatu>
                   </tbody>
+                </table>
+
+                <table
+                  className={
+                    (selectOpsi === "Latihan Bab Dua" &&
+                    selectSekolah === "MAN 3 Banjarmasin"
+                      ? " "
+                      : "hidden") + " min-w-full leading-normal "
+                  }
+                  id="print-tabel-dua"
+                >
+                  <thead>
+                    <tr>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        No
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nama
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Sekolah
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nilai
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Hari/Tanggal
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Jam
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Aksi
+                      </th>
+                    </tr>
+                  </thead>
                   <tbody
-                    className={
-                      selectOpsi === "Latihan Bab Dua" &&
-                      selectSekolah === "MAN 3 Banjarmasin"
-                        ? ""
-                        : "hidden"
-                    }
+                  // className={
+                  //   selectOpsi === "Latihan Bab Dua" &&
+                  //   selectSekolah === "MAN 3 Banjarmasin"
+                  //     ? ""
+                  //     : "hidden"
+                  // }
                   >
                     <ListLatihanDua></ListLatihanDua>
                   </tbody>
+                </table>
+                <table
+                  className={
+                    (selectOpsi === "Latihan Bab Tiga" &&
+                    selectSekolah === "MAN 3 Banjarmasin"
+                      ? " "
+                      : "hidden") + " min-w-full leading-normal "
+                  }
+                  id="print-tabel-tiga"
+                >
+                  <thead>
+                    <tr>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        No
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nama
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Sekolah
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nilai
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Hari/Tanggal
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Jam
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Aksi
+                      </th>
+                    </tr>
+                  </thead>
                   <tbody
-                    className={
-                      selectOpsi === "Latihan Bab Tiga" &&
-                      selectSekolah === "MAN 3 Banjarmasin"
-                        ? ""
-                        : "hidden"
-                    }
+                  // className={
+                  //   selectOpsi === "Latihan Bab Tiga" &&
+                  //   selectSekolah === "MAN 3 Banjarmasin"
+                  //     ? ""
+                  //     : "hidden"
+                  // }
                   >
                     <ListLatihanTiga></ListLatihanTiga>
                   </tbody>
+                </table>
+                <table
+                  className={
+                    (selectOpsi === "Evaluasi" &&
+                    selectSekolah === "MAN 3 Banjarmasin"
+                      ? " "
+                      : "hidden") + " min-w-full leading-normal "
+                  }
+                  id="print-tabel-empat"
+                >
+                  <thead>
+                    <tr>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        No
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nama
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Sekolah
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Nilai
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Hari/Tanggal
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Jam
+                      </th>
+                      <th className="px-5 py-3 border-2 border-white bg-cyan-400 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                        Aksi
+                      </th>
+                    </tr>
+                  </thead>
                   <tbody
-                    className={
-                      selectOpsi === "Evaluasi" &&
-                      selectSekolah === "MAN 3 Banjarmasin"
-                        ? ""
-                        : "hidden"
-                    }
+                  // className={
+                  //   selectOpsi === "Evaluasi" &&
+                  //   selectSekolah === "MAN 3 Banjarmasin"
+                  //     ? ""
+                  //     : "hidden"
+                  // }
                   >
                     <Evaluasi></Evaluasi>
                   </tbody>

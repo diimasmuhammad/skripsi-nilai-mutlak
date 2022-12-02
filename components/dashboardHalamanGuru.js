@@ -214,6 +214,7 @@ export default function DashboardHalamanGuru(props) {
           </div>
         </div>
       </div>
+
       <div className="bottom-0  mx-auto text-white block sm:hidden">
         <div className="flex container bg-cyan-500 w-130 p-2 mx-3 justify-between">
           <div>
