@@ -1243,19 +1243,20 @@ export default function HalamanTiga() {
               <div
                 className={" mt-2 text-sm " + (bukaLatihanSatu ? "" : "hidden")}
               >
-                <div>
+                {/* <div>
                   <button
                     onClick={tooglePetunjukSatu}
                     className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
                   >
                     Petunjuk (klik saya)
                   </button>
-                </div>
+                </div> */}
                 <div
-                  className={
-                    "bg-cyan-500 w-full p-2 mt-2 text-white " +
-                    (petunjukSatu ? "" : "hidden")
-                  }
+                  className="bg-cyan-500 w-full p-2 mt-2 text-white "
+                  // className={
+                  //   "bg-cyan-500 w-full p-2 mt-2 text-white " +
+                  //   (petunjukSatu ? "" : "hidden")
+                  // }
                 >
                   <ol className="list-decimal pl-3">
                     <li>
@@ -2666,19 +2667,20 @@ export default function HalamanTiga() {
               <div
                 className={" mt-2 text-sm " + (bukaLatihanDua ? "" : "hidden")}
               >
-                <div>
+                {/* <div>
                   <button
                     onClick={tooglePetunjukDua}
                     className=" uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
                   >
                     Petunjuk (klik saya)
                   </button>
-                </div>
+                </div> */}
                 <div
-                  className={
-                    "bg-cyan-500 w-full p-2 mt-2 text-white " +
-                    (petunjukDua ? "" : "hidden")
-                  }
+                  className="bg-cyan-500 w-full p-2 mt-2 text-white "
+                  // className={
+                  //   "bg-cyan-500 w-full p-2 mt-2 text-white " +
+                  //   (petunjukDua ? "" : "hidden")
+                  // }
                 >
                   <ol className="list-decimal pl-3">
                     <li>

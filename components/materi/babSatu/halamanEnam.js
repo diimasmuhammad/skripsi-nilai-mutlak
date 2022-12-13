@@ -1015,17 +1015,18 @@ export default function HalamanEnam() {
             Mari Mencoba
           </a>
         </div>
-        <button
+        {/* <button
           onClick={tooglePetunjuk}
           className="w-max uppercase mt-2 flex justify-between items-center gap-8 px-2 py-1 transition-all duration-300 ease-linear bg-cyan-600 text-white hover:ring-1 hover:ring-cyan-600 rounded-lg hover:bg-white hover:text-cyan-600 hover:rounded-lg cursor-pointer"
         >
           Petunjuk (Klik saya)
-        </button>
+        </button> */}
         <div
-          className={
-            "bg-cyan-500 w-full p-2 mt-2 text-white " +
-            (petunjuk ? "" : "hidden")
-          }
+          className="bg-cyan-500 w-full p-2 mt-2 text-white "
+          // className={
+          //   "bg-cyan-500 w-full p-2 mt-2 text-white " +
+          //   (petunjuk ? "" : "hidden")
+          // }
         >
           <ol className="list-decimal pl-3">
             <li>
