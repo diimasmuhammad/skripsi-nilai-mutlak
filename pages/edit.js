@@ -3,6 +3,7 @@ import EditKkm from "../components/guru/edit/editKkm";
 import EditToken from "../components/guru/edit/editToken";
 
 import DashboardHalamanGuru from "../components/dashboardHalamanGuru";
+import EditDataGuru from "../components/guru/edit/editDataGuru";
 
 export default function edit() {
   const [bukaTab, setBukaTab] = useState(1);
@@ -34,6 +35,17 @@ export default function edit() {
                   Edit Token Latihan
                 </a>
               </li>
+              <li>
+                <a
+                  onClick={() => setBukaTab(3)}
+                  className={
+                    " cursor-pointer " +
+                    (bukaTab === 3 ? " border-b-4 border-cyan-600" : "")
+                  }
+                >
+                  Edit Data Guru
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -47,6 +59,9 @@ export default function edit() {
                     </div>
                     <div className={" " + (bukaTab === 2 ? "block" : "hidden")}>
                       <EditToken></EditToken>
+                    </div>
+                    <div className={" " + (bukaTab === 3 ? "block" : "hidden")}>
+                      <EditDataGuru></EditDataGuru>
                     </div>
                   </div>
                 </div>

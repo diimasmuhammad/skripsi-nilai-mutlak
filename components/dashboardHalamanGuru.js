@@ -40,6 +40,10 @@ export default function DashboardHalamanGuru(props) {
     window.localStorage.setItem("bukaHalamanGuruMobile", halamanMobile);
   }, [halamanMobile]);
 
+  const logOut = () => {
+    localStorage.removeItem("dataGuru");
+  };
+
   return (
     // sidebar
     <div className="flex flex-col">
@@ -164,6 +168,7 @@ export default function DashboardHalamanGuru(props) {
           <div className="flex gap-1 absolute bottom-5 ml-0 cursor-pointer">
             <Link href="/">
               <button
+                onClick={logOut}
                 type="button"
                 className=" bg-white text-base flex items-center text-cyan-500 font-semibold shadow-md p-2 rounded-md hover:bg-cyan-500 hover:text-white hover:ring-2 hover:ring-white"
               >
@@ -221,7 +226,7 @@ export default function DashboardHalamanGuru(props) {
             <Link href="/">
               <button
                 className="hover:bg-white hover:text-cyan-500 p-2 rounded-lg"
-                onClick={() => setHalamanMobile(1)}
+                onClick={logOut}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
